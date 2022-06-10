@@ -1,106 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/nosotros.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/navbar.css">
     <title>Sock-it! - Nosotros</title>
 </head>
-<!-- <header class="footer">footer de arriba</header> -->
+<header>
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0096FF;">
+        <a class="navbar-brand" href="./inicio.html">
+            <img src="./img/logo.png" alt="logo" style="width:120px; height: 85px; border-radius: 10%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" id="catalogo" href="./catalogo.html">Catálogo <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contactanos" href="./contactanos.html">Contáctanos </a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" id="nosotros" href="./nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle " id="iniciarRegistro" href="./formulario.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+              Iniciar sesión / Crear cuenta
+            </a>
+                    <div class="dropdown-menu" style="background-color: #0096FF" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" id="iniciar" href="#">Iniciar sesión</a>
+                        <a class="dropdown-item" id="registro" href="./registro.html">Crear cuenta</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+</header>
+
 <body>
     <!--Carrusel-->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="background-color: #0095ff81;">
         <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         </ol>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
+            <div class="carousel-item active">
+                <!-- <img src="..." class="d-block w-100" alt="..."> -->
                 <!--cards(cartas)-->
-                    <div class="row">
+                <div class="row">
 
-                        <div class = "col-md mb-2">
-                          <div class="card" style="width: 18rem;">
+                    <div class="col-md mb-2">
+                        <div class="card" style="width: 18rem;">
                             <img src="./img/foto_Agustin.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Agustin Moreno Merino</h5>
-                                    <p class="card-text">Gobernador de Michoacán, filántropo, con gusto por el arte del siglo xv yel buen vino.</p>
-                                    <a href="https://www.linkedin.com/in/agustin-moreno-m/" class="btn btn-primary"target="_blank">LinkedIn</a>
-                                </div>
-                           </div>
-                        </div>
-
-                        <div class = "col-md mb-2">
-                        <div class="card" style="width: 18rem;">
-                            <img src="./img/foto_Andres_Minakata.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Andrés Kazuo Minakata Comparán</h5>
-                                    <p class="card-text">Desarrollador Java  Fullstack, con gusto por la ciencia y tecnología, y con conocimientos en Java, Javascript, html y python.</p>
-                                    <a href="https://www.linkedin.com/in/andresminakata/" class="btn btn-primary"target="_blank">LinkedIn</a>
-                                </div>
-                              </div>
-                        </div>
-
-                        <div class = "col-md mb-3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="./img/foto_Claudio.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Claudio Balbuena Sámano</h5>
-                                    <p class="card-text">Desarrollador Java Fullstack, con gusto por tecnología y los deportes, con conocimientos de JAVA, JAVASCRIPT, HTML, CSS y diferentes frameworks de programación.</p>
-                                    <a href="https://www.linkedin.com/in/claudio-balbuena-58431216a/" class="btn btn-primary"target="_blank">LinkedIn</a>
-                                </div>
-                              </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Agustin Moreno Merino</h5>
+                                <p class="card-text">Gobernador de Michoacán, filántropo, con gusto por el arte del siglo xv yel buen vino.</p>
+                                <a href="https://www.linkedin.com/in/agustin-moreno-m/" class="btn btn-primary" target="_blank">LinkedIn</a>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="col-md mb-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./img/foto_Andres_Minakata.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Andrés Kazuo Minakata Comparán</h5>
+                                <p class="card-text">Desarrollador Java Fullstack, con gusto por la ciencia y tecnología, y con conocimientos en Java, Javascript, html y python.</p>
+                                <a href="https://www.linkedin.com/in/andresminakata/" class="btn btn-primary" target="_blank">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md mb-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./img/foto_Claudio.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Claudio Balbuena Sámano</h5>
+                                <p class="card-text">Desarrollador Java Fullstack, con gusto por tecnología y los deportes, con conocimientos de JAVA, JAVASCRIPT, HTML, CSS y diferentes frameworks de programación.</p>
+                                <a href="https://www.linkedin.com/in/claudio-balbuena-58431216a/" class="btn btn-primary" target="_blank">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!--termino de cartas-->
-          </div>
+            </div>
 
             <div class="carousel-item">
-              <!-- <img src="..." class="d-block w-100" alt="..."> -->
-                  <!--cards(cartas parte 2)-->
-                      <div class="row">
-  
-                          <div class = "col-md mb-2">
-                            <div class="card" style="width: 18rem;">
-                              <img src="./img/foto_Hector_DLT.png" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Hector Alejandro De La Torre Cruz</h5>
-                                      <p class="card-text">Artista multimedia y desarollador java full stack, con gusto por la tecnologia y los animales.</p>
-                                      <a href="https://www.linkedin.com/in/hector-alejandro-dltc/" class="btn btn-primary" target="_blank">LinkedIn</a>
-                                  </div>
-                             </div>
-                          </div>
-  
-                          <div class = "col-md mb-2">
-                          <div class="card" style="width: 18rem;">
-                              <img src="./img/foto_Kevin.jpg" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Kevin "calcetin con rombos man"</h5>
-                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                      <a href="#" class="btn btn-primary" target="_blank">LinkedIn</a>
-                                  </div>
-                                </div>
-                          </div>
-  
-                          <div class = "col-md mb-3">
-                          <div class="card" style="width: 18rem;">
-                              <img src="./img/foto_Luis_Miguel_TV.png" class="card-img-top" alt="...">
-                                  <div class="card-body">
-                                      <h5 class="card-title">Luis Miguel Torres Valdez</h5>
-                                      <p class="card-text">Desarrollador java full stack con conocimientos en multiples lenguajes de programacion como c, c++, python y ruby.</p>
-                                      <a href="https://www.linkedin.com/in/luis-miguel-torres-valdez-26679223a/" class="btn btn-primary" target="_blank">LinkedIn</a>
-                                  </div>
-                                </div>
-                          </div>
-                      </div>
-                  <!--termino de cartas-->
-  
-            <!--termino de cartas parte dos-->
-          </div>
+                <!-- <img src="..." class="d-block w-100" alt="..."> -->
+                <!--cards(cartas parte 2)-->
+                <div class="row">
+
+                    <div class="col-md mb-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./img/foto_Hector_DLT.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Hector Alejandro De La Torre Cruz</h5>
+                                <p class="card-text">Artista multimedia y desarollador java full stack, con gusto por la tecnologia y los animales.</p>
+                                <a href="https://www.linkedin.com/in/hector-alejandro-dltc/" class="btn btn-primary" target="_blank">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md mb-2">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./img/foto_Kevin.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Kevin "calcetin con rombos man"</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary" target="_blank">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md mb-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="./img/foto_Luis_Miguel_TV.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Luis Miguel Torres Valdez</h5>
+                                <p class="card-text">Desarrollador java full stack con conocimientos en multiples lenguajes de programacion como c, c++, python y ruby.</p>
+                                <a href="https://www.linkedin.com/in/luis-miguel-torres-valdez-26679223a/" class="btn btn-primary" target="_blank">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--termino de cartas-->
+
+                <!--termino de cartas parte dos-->
+            </div>
         </div>
         <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -110,79 +153,83 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </button>
-      </div>
-      <!--termino del carrusel-->
-      <!--secciones (hector y agustin)-->
-      <div class="container marketing"> 
+    </div>
+    <!--termino del carrusel-->
+    <!--secciones (hector y agustin)-->
+    <div class="container marketing">
         <hr class="featurette-divider">
         <div class="row featurette">
-          <div class="col-sm-7">        <!--  -->
-            <h2 >Historia del Equipo </h2>
-            <p class="lead">Al inicio fue algo complicado que hacer pero se llego al acuerdo de hacer un e-commerce dela mano de una de 
-              las 3 opciones que teniamos disponibles como lo eran keycaps, lentes y calcetines, al final esto se dejo al azar para no 
-              dejar ninguna idea fuera, al final los calcetines ganaron y el equipo se puso manos a la obra.</p>
-          </div>
-          <div class="col-sm-3">
-            <img src="https://cdn.discordapp.com/attachments/982060205753917531/983758953311784990/opciones.png" height="50%">
-          </div>
+            <div class="col-sm-7">
+                <!--  -->
+                <h2>Historia del Equipo </h2>
+                <p class="lead">Al inicio fue algo complicado que hacer pero se llego al acuerdo de hacer un e-commerce dela mano de una de las 3 opciones que teniamos disponibles como lo eran keycaps, lentes y calcetines, al final esto se dejo al azar para no dejar
+                    ninguna idea fuera, al final los calcetines ganaron y el equipo se puso manos a la obra.</p>
+            </div>
+            <div class="col-sm-3">
+                <img src="https://cdn.discordapp.com/attachments/982060205753917531/983758953311784990/opciones.png" height="50%">
+            </div>
         </div>
-    
+
         <hr class="featurette-divider">
-    
+
         <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">COMO INICIAMOS CON <span class="text-muted">GENERATION</span></h2>
-           <p class="lead">Las Calcetines en el streetwear tienen raíces que se remontan a algunos de los artistas callejeros, escritores de graffiti, muralistas y diseñadores más famosos de todos los tiempos. Con esa historia compartida en mente, nuestro
-           objetivo es conectar a los jóvenes con las artes apoyando el trabajo de organizaciones que fomentan la creatividad a través de la programación educativa y el aprendizaje práctico.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img src="https://media.discordapp.net/attachments/982060205753917531/983752595719995402/unknown.png" height="90%" alt="">
-    
-          </div>
+            <div class="col-md-7 order-md-2">
+                <h2 class="featurette-heading">COMO INICIAMOS CON <span class="text-muted">GENERATION</span></h2>
+                <p class="lead">Las Calcetines en el streetwear tienen raíces que se remontan a algunos de los artistas callejeros, escritores de graffiti, muralistas y diseñadores más famosos de todos los tiempos. Con esa historia compartida en mente, nuestro objetivo
+                    es conectar a los jóvenes con las artes apoyando el trabajo de organizaciones que fomentan la creatividad a través de la programación educativa y el aprendizaje práctico.</p>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <img src="https://media.discordapp.net/attachments/982060205753917531/983752595719995402/unknown.png" height="90%" alt="">
+
+            </div>
         </div>
         <br/>
-    
+
         <hr class="featurette-divider">
-    
+
         <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">VISION <span class="text-muted"></span></h2>
-            <p class="lead">Estar siempre en disponible para los pies de cientos de mexicanos atravez de la web para que puedan mantener el estilo underground y el Drip.</p>
-            
-            
-            <h2 class="featurette-heading">MISION<span class="text-muted"></span></h2>
-            <p class="lead">Ser la plataforma nacional de confianza para consumir y comerciar con la cultura de los calcetines.</p> <!--si lees esto eres gay-->
+            <div class="col-md-7">
+                <h2 class="featurette-heading">VISION <span class="text-muted"></span></h2>
+                <p class="lead">Estar siempre en disponible para los pies de cientos de mexicanos atravez de la web para que puedan mantener el estilo underground y el Drip.</p>
+
+
+                <h2 class="featurette-heading">MISION<span class="text-muted"></span></h2>
+                <p class="lead">Ser la plataforma nacional de confianza para consumir y comerciar con la cultura de los calcetines.</p>
+                <!--si lees esto eres gay-->
             </div>
-          <div class="col-md-5">
-            <img src="https://cdn.discordapp.com/attachments/982060205753917531/983875944425062472/descarga_6.jpeg">
-            <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-    
-          </div>
+            <div class="col-md-5">
+                <img src="https://cdn.discordapp.com/attachments/982060205753917531/983875944425062472/descarga_6.jpeg">
+                <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+
+            </div>
         </div>
-    
+
         <hr class="featurette-divider">
-      </div>
+    </div>
 
-     
-      
 
-      
 
-      <!--secciones (hector y agustin)-->
-      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    <script src="./js/nosotros.js"></script>
+
+
+    <!--secciones (hector y agustin)-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
 <footer style="background-color: #FF4545; border: solid;">
-  <div style="background-color: #0078CF;">
-  <img src="./img/logo.png"  id="footer-logo">
-  <img src="./img/generation-logo.png"  class="footer-logo2">
-  <div style="background-color: white;">
-      <p> <h3 style="text-align: center; margin-top: 0.8rem;"><a href="./inicio.html">Inicio</a> | 
-           <a href="./nosotros.html">Nosotros</a> | <a href="./registro.html">Registrate</a> | 
-           <a href="./formulario.html">Log in</a> | <a href="./catalogo.html">Catalogo</a> | <a href="./contactanos.html">Contactanos</a></h3> </p>
-  </div>
-  </div>
-  <p style="text-align: center; margin-top: 0.8rem;" > Condiciones de uso | Aviso de privacidad© 1996-2022 | Sockit.com, Inc. o sus afiliados </p>
+    <div style="background-color: #0078CF;">
+        <img src="./img/logo.png" id="footer-logo">
+        <img src="./img/generation-logo.png" class="footer-logo2">
+        <div style="background-color: white;">
+            <p>
+                <h3 style="text-align: center; margin-top: 0.8rem;"><a href="./inicio.html">Inicio</a> |
+                    <a href="./nosotros.html">Nosotros</a> | <a href="./registro.html">Registrate</a> |
+                    <a href="./formulario.html">Log in</a> | <a href="./catalogo.html">Catalogo</a> | <a href="./contactanos.html">Contactanos</a></h3>
+            </p>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 0.8rem;"> Condiciones de uso | Aviso de privacidad© 1996-2022 | Sockit.com, Inc. o sus afiliados </p>
 </footer>
 
 </html>
