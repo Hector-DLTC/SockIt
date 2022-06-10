@@ -1,0 +1,70 @@
+.footer{
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.row{
+    margin-left:8%;
+    margin-right: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.featurette{
+    max-height: 240px;
+
+}
+.card{
+    background-color: #4A95FE;
+    box-shadow: -10px 10px ;
+    
+}
+@keyframes example {
+    from {background-color:#4A95FE;}
+    to {background-color: #FF0300;}
+
+  }
+.card:hover{
+    background-color: #FF0300;
+    transition-delay: 500ms;
+
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+    
+}
+
+.card-text{
+    width: 250px;
+    height: 100px;
+    overflow: auto;
+    text-align: justify;
+    color:white;
+    
+
+}
+.card-img-top{
+    width: auto;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: solid;
+    box-shadow: -3px 3px;
+    border-color: white;
+    color: black;
+    
+}
+.card-title{
+    text-align: center;
+    height: 50px;
+    color: white;
+}
+.btn-primary{
+    margin-left: 30%;
+    box-shadow: -5px 5px;
+    color: black;
+}
