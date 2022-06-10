@@ -1,0 +1,82 @@
+body{
+    background-color: #0096FF;
+} 
+.container{
+    background-color: #4A95FE;
+    margin:50px;
+    padding:8rem;
+    border-radius: 30px;
+    border:solid;
+    box-shadow: -25px 25px;
+}
+.btn{
+    background-color: red;
+    border-radius: 10px;
+    justify-content: flex-end;
+    margin-left: 40%;
+    margin-top: 15px;
+    width: 200px;
+    color:white;
+    box-shadow:-5px 5px ;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    
+
+}
+label {
+    margin-bottom: .8rem;
+    text-align: center;
+    display: block;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: large;
+    font-weight: bolder;
+    
+  }
+
+  .form-control {
+    border: none;
+    background: white;
+    border-bottom: 3px solid rgb(0, 0, 0);
+    transition: border-color .4s ease-out;
+    border-radius: 30px;
+  }
+
+.form-control:active,
+.form-control:focus,
+.btn.focus,
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: black;
+}
+
+.form-control + small {
+    color: red;
+    opacity: 0;
+    height: 0;
+    transition: opacity .5s ease-out;
+    font-weight: bold;
+
+  }
+  
+  .form-control.invalid + small {
+    opacity: 1;
+    height: auto;
+    margin-bottom: 20px;
+    transition: opacity .5s ease-out;
+
+  }
+  
+  #textBox{
+    height: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: scroll;
+  }
+  .titulo{
+    margin-bottom: 1rem;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
