@@ -22,7 +22,9 @@ inputs.forEach((input) => {
 
 function validate(field, regex) {
   if (regex.test(field.value)) {
+    
     return field.className = 'form-control valid';
+    
   } else {
     return field.className = 'form-control invalid';
   }
@@ -30,15 +32,16 @@ function validate(field, regex) {
 
 
 
+
 function sendEmail() {
   Email.send({
-	Host: "smtp.gmail.com",
-	Username : document.getElementById(email),
-	Password : "<email password>",
-	To : 'sockitteam3@gmail.com',
-	From : document.getElementById(email),
-	Subject : "<email subject>",
-	Body : document.getElementById(textBox),
+	Host: "smtp.elasticemail.com",
+	Username : "sockitteam3@gmail.com",
+	Password : "59BE6EC9FA97D2E6B92C95FDAD31261AC949",
+	To : 'kazuominakata@gmail.com',
+	From : "kazuominakata@hotmail.com",
+	Subject : "test",
+	Body : "test",
 	}).then(
 		message => Swal.fire({
       position: 'center',
