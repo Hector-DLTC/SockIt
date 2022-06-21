@@ -54,23 +54,16 @@
 <body>
     <div class="container">
         <div class="row">
+
             <div class="col-12 col-md-8 mx-md-auto mt-5"> 
-                <form class="px-2 px-sm-5 py-5">
+                <form class="px-2 px-sm-5 py-5" id="f">
                     <h1 class="titulo">Contáctanos:</h1>
+                    
+                    
                     <div class="form-group">
                         <label for="username">Nombre: </label>
-
-                        
-
-                        <input type="text" class="form-control" id="username" placeholder="Nombre: " maxlength="15" required>
-
+                        <input type="text" class="form-control" id="Name" placeholder="Nombre: " maxlength="15" required>
                         <small id="usernameHelp" class="form-text">No utilices números y/o espacios.</small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="lastName">Apellido: </label>
-                        <input type="text" class="form-control" id="lastName" placeholder="Apellido: " maxlength="15" required>
-                        <small id="lastNameHelp" class="form-text">No utilices números y/o espacios.</small>
                     </div>
 
                     <div class="form-group">
@@ -88,25 +81,22 @@
                     <div class="form-group">
                         <label for="textbox">Ingresa tu texto: </label>
                         <textarea maxlength="280" name="textBox" cols="45" rows="10"  class="form-control" id="textBox" placeholder="Límite de 280 carácteres "required></textarea>
-                        <!-- <input type="text" class="form-control" id="textBox" placeholder="Ingresa aquí tu texto" required> -->
                         <small id="textBoxHelp" class="form-text">Máximo 280 Carácteres</small>
                     </div>
 
-                    <!-- <form method="post">
-                        <input type="submit" value="Enviar" class="btn d-block mx-auto"  onclick="sendEmail()"/>
-                    </form>   -->
-                    <form method="post">
-                        <button class="btn d-block mx-auto" type="submit" value="submit" onclick="sendEmail()">Enviar</button>
-                    </form>
+                   
+                    <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar</button>
+                   
+                 
 
                 </form>
                
             </div>
         </div>
-    </div>
+    </div> 
 
 
-    <script src="./js/contactanos.js"></script>
+    <script type = "module" src="./js/contactanos.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
