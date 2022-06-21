@@ -71,8 +71,7 @@ function sendEmail() {
     Host: "smtp.elasticemail.com",
     Username: "sockitteam3@gmail.com",
     Password: "59BE6EC9FA97D2E6B92C95FDAD31261AC949",
-    To: ["kazuominakata@gmail.com","andresminakata@gmail.com"],
-    //Aquí van agregar todos sus correos ^
+    To: ["kazuominakata@gmail.com", "torresvaldezluismiguel@gmail.com", "agustin.moreno.lll@gmail.com","claudio.empire.25@gmail.com", "hectoradltc@gmail.com", "TorresValdezLuisMiguel@gmail.com"],
     From: "sockitteam3@gmail.com",
     Subject: "Correo nuevo",
     Body: `<ul>Nombre: ${txtNombre.value} <br/> 
