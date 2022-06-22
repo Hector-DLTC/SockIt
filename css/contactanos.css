@@ -1,34 +1,35 @@
-body{
+body {
     background-color: #0096FF;
-} 
-.container{
+}
+
+.container {
     background-color: #4A95FE;
-    margin:50px;
-    padding:8rem;
+    margin: 50px;
+    padding: 8rem;
     border-radius: 30px;
-    border:solid;
+    border: solid;
     box-shadow: -25px 25px;
     margin-left: auto;
     margin-right: auto;
     display: block;
 }
-.btn{
+
+.btn {
     background-color: red;
     border-radius: 10px;
     justify-content: flex-end;
     margin-left: 40%;
     margin-top: 15px;
     width: 200px;
-    color:white;
-    box-shadow:-5px 5px ;
+    color: white;
+    box-shadow: -5px 5px;
     border-bottom: 3px solid rgb(0, 0, 0);
     display: block;
     /* margin-left: auto;
     margin-right: auto; */
     /* align-content: center; */
-    
-
 }
+
 label {
     margin-bottom: .8rem;
     text-align: center;
@@ -38,10 +39,10 @@ label {
     text-transform: uppercase;
     font-size: large;
     font-weight: bolder;
-    text-shadow:0 0 1px black;
-  }
+    text-shadow: 0 0 1px black;
+}
 
-  .form-control {
+.form-control {
     border: none;
     background: white;
     border-bottom: 3px solid rgb(0, 0, 0);
@@ -49,41 +50,40 @@ label {
     border-radius: 30px;
     height: 3rem;
     text-align: center;
-  }
+}
 
 .form-control:active,
 .form-control:focus,
 .btn.focus,
 .btn:focus {
-  outline: none;
-  box-shadow: none;
-  border-color: black;
- 
+    outline: none;
+    box-shadow: none;
+    border-color: black;
 }
 
-.form-control + small {
+.form-control+small {
     color: red;
     opacity: 0%;
     height: 0;
     transition: opacity .5s ease-out;
     font-weight: bold;
     font-size: medium;
-    text-shadow:0 0 1px black;
+    text-shadow: 0 0 1px black;
     margin-bottom: 45px;
     text-align: center;
     padding-left: 5px;
+}
 
-  }
-  
-  .form-control.invalid + small {
+.form-control.invalid+small {
     opacity: 1;
     height: auto;
     margin-bottom: 20px;
     transition: opacity .5s ease-out;
-    text-shadow:0 0 1px black;
-  }
-  
-  /* #textBox{
+    text-shadow: 0 0 1px black;
+}
+
+
+/* #textBox{
     height: 100px;
     padding: 20px;
     box-sizing: border-box;
@@ -91,48 +91,15 @@ label {
 
   } */
 
-  .titulo{
+.titulo {
     margin-top: -10rem;
     margin-bottom: 2rem;
     text-align: center;
     color: white;
     font-weight: bold;
-    text-shadow:0 0 1px black;
-  }
-
-#textBox{
-text-align: justify;
+    text-shadow: 0 0 1px black;
 }
 
-@media (max-width:991px){
-  
-  
-  .container{
-    padding-left:7% ;
-    padding-right: 7%;
-    
-  }
-  
-}
-
-
-@media (max-width:606px){
-  
-  
-  .container{
-    grid-area: auto;
-    box-shadow: 0px 25px;
-    border-radius: 0px;
-    
-  }
-  .titulo{
-    font-size: large;
-  }
-  label{
-    font-size: small;
-  }
-  .btn{
-    width:100px;
-    box-shadow: 0px 5px;
-  }
+#textBox {
+    text-align: justify;
 }

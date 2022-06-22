@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 
-<head>
+<head> 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
@@ -54,33 +54,33 @@
 <body>
     <div class="container">
         <div class="row">
-<<<<<<< HEAD
+
             <div class="col-12 col-md-8 mx-md-auto mt-5">
-=======
-=======
->>>>>>> 71c36113ddaaf26660f432bb020c34777e194a5d
+
             <div class="col-12 col-md-8 mx-md-auto mt-5"> 
                 <form class="px-2 px-sm-5 py-5">
                     <h1 class="titulo">Contáctanos:</h1>
                     <div class="form-group">
                         <label for="username">Nombre: </label>
-<<<<<<< HEAD
-                        <input type="text" class="form-control" id="username" placeholder="Nombre: " maxlength="15" required>
-=======
 
                         
 
                         <input type="text" class="form-control" id="username" placeholder="Nombre: " maxlength="15" required>
 
->>>>>>> 71c36113ddaaf26660f432bb020c34777e194a5d
                         <small id="usernameHelp" class="form-text">No utilices números y/o espacios.</small>
->>>>>>> fc0147255874f4e1831f5f0057b16b9a79a81840
+
                     </div>
 
+            <div class="col-12 col-md-8 mx-md-auto mt-5">
+                <form class="px-2 px-sm-5 py-5">
+                    <h1 class="titulo">Contáctanos:</h1>
+
+
+
                     <div class="form-group">
-                        <label for="lastName">Apellido: </label>
-                        <input type="text" class="form-control" id="lastName" placeholder="Apellido: " maxlength="15" required>
-                        <small id="lastNameHelp" class="form-text">No utilices números y/o espacios.</small>
+                        <label for="username">Nombre: </label>
+                        <input type="text" class="form-control" id="Name" placeholder="Nombre: " maxlength="15" required>
+                        <small id="usernameHelp" class="form-text">No utilices números y/o espacios.</small>
                     </div>
 
                     <div class="form-group">
@@ -97,60 +97,53 @@
 
                     <div class="form-group">
                         <label for="textbox">Ingresa tu texto: </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                         <input type="text" class="form-control" id="textBox" placeholder="Ingresa aquí tu texto" required>
                         <small id="textBoxHelp" class="form-text">Máximo 256 Carácteres</small>
                     </div>
 
                     <button class="btn d-block mx-auto" type="submit" value="submit">Enviar</button>
                 </form>
-=======
-<<<<<<< HEAD
-                        <textarea maxlength="280" name="textBox" cols="45" rows="10" class="form-control" id="textBox" placeholder="Límite de 280 carácteres " required></textarea>
-=======
-=======
->>>>>>> 71c36113ddaaf26660f432bb020c34777e194a5d
+
                         <textarea maxlength="280" name="textBox" cols="45" rows="10"  class="form-control" id="textBox" placeholder="Límite de 280 carácteres "required></textarea>
                         <!-- <input type="text" class="form-control" id="textBox" placeholder="Ingresa aquí tu texto" required> -->
                         <small id="textBoxHelp" class="form-text">Máximo 280 Carácteres</small>
+
+                        <textarea maxlength="280" name="textBox" cols="45" rows="10" class="form-control" id="textBox" placeholder="Límite de 280 carácteres " required></textarea>
+
+                        <small id="textBoxHelp" class="form-text">Máximo 256 Carácteres</small>
+
                     </div>
 
-                    <!-- <form method="post">
-                        <input type="submit" value="Enviar" class="btn d-block mx-auto"  onclick="sendEmail()"/>
-                    </form>   -->
-                    <form method="post">
-                        <button class="btn d-block mx-auto" type="submit" value="submit" onclick="sendEmail()">Enviar</button>
-                    </form>
+
+                    <button type="submit" id="btnEnviar" class="btn d-block mx-auto">Enviar</button>
+
+
 
                 </form>
-               
-<<<<<<< HEAD
->>>>>>> 379b5558dea8335906da2984c2173fc85527c3e4
->>>>>>> fc0147255874f4e1831f5f0057b16b9a79a81840
-=======
->>>>>>> 71c36113ddaaf26660f432bb020c34777e194a5d
+
+
             </div>
         </div>
     </div>
 
 
-    <script src="./js/contactanos.js"></script>
+    <script type="module" src="./js/contactanos.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 
 </body>
-<footer style="background-color: #FF4545; border: solid;">
+<footer style="background-color: #FF4545; border: solid;" class="footer">
     <div style="background-color: #0078CF;">
-        <img src="./img/logo.png" id="footer-logo">
+        <img src="./img/logo.png" class="footer-logo">
         <img src="./img/generation-logo.png" class="footer-logo2">
         <div style="background-color: white;">
             <p>
-                <h3 style="text-align: center; margin-top: 0.8rem;"><a href="./index.html">Inicio</a> |
+                <h3 class="links-footer" style="text-align: center; margin-top: 0.8rem;"><a href="./index.html">Inicio</a> |
                     <a href="./nosotros.html">Nosotros</a> | <a href="./registro.html">Registrate</a> |
-                    <a href="./formulario.html">Log in</a> | <a href="./catalogo.html">Catalogo</a> | <a href="./contactanos.html">Contactanos</a></h3>
+                    <a href="./formulario.html">Log in</a> | <a href="./catalogo.html">Catálogo</a> | <a href="./contactanos.html">Contáctanos</a></h3>
             </p>
         </div>
     </div>
