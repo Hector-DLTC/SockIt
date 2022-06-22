@@ -1,16 +1,17 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="./css/contactanos.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/navbar.css">
-    <title> Contáctanos </title>
+   
+    <title>Inicio de sesíon</title>
 </head>
 <header>
 
@@ -21,8 +22,8 @@
             <img src="./img/logo.png" alt="logo" style="width:120px; height: 85px; border-radius: 10%;">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <span class="navbar-toggler-icon"></span>
+      </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
@@ -36,8 +37,8 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle " id="iniciarRegistro" href="./formulario.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-                Iniciar sesión / Crear cuenta
-              </a>
+              Iniciar sesión / Crear cuenta
+            </a>
                     <div class="dropdown-menu" style="background-color: #0096FF" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" id="iniciar" href="./Login.html">Iniciar sesión</a>
                         <a class="dropdown-item" id="registro" href="./registro.html">Crear cuenta</a>
@@ -54,38 +55,24 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-8 mx-md-auto mt-5">
+            <div class="col-12 col-md-8 mx-md-auto mt-5" style="background-color:#0096FF; border-radius: 10%;">
                 <form class="px-2 px-sm-5 py-5">
-                    <h1 class="titulo">Contáctanos:</h1>
+                    <a href="./index.html" style="color: white;"> <- Regresar</a>
 
-
-                    <div class="form-group">
-                        <label for="username">Nombre: </label>
-                        <input type="text" class="form-control" id="Name" placeholder="Nombre: " maxlength="15" required>
-                        <small id="usernameHelp" class="form-text">No utilices números y/o espacios.</small>
-                    </div>
+                    <h1 class="titulo">Iniciar sesíon</h1>
 
                     <div class="form-group">
                         <label for="email">Email: </label>
                         <input type="text" class="form-control" id="email" placeholder="Email: " required>
-                        <small id="emailHelp" class="form-text">Email inválido.</small>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Télefono: </label>
-                        <input type="text" class="form-control" id="phone" placeholder="Télefono: " maxlength="10" minlength="10" required>
-                        <small id="phoneHelp" class="form-text">Número de télfono inválido.</small>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="textbox">Ingresa tu texto: </label>
-                        <textarea maxlength="280" name="textBox" cols="45" rows="10" class="form-control" id="textBox" placeholder="Límite de 280 carácteres " required></textarea>
-
-                        <small id="textBoxHelp" class="form-text">Máximo 256 Carácteres</small>
+                        <label for="password">Contraseña: </label>
+                        <input type="password" class="form-control" id="password" placeholder="Contraseña" maxlength="24" minlength="8" required>
                     </div>
 
 
-                    <button type="submit" id="btnEnviar" class="btn d-block mx-auto">Enviar</button>
+                    <button type="submit" id="btnproducto" class="btn d-block mx-auto" style="background-color: red;">Agregar</button>
 
 
 
@@ -93,15 +80,15 @@
             </div>
         </div>
     </div>
+    <br>
 
 
-    <script type="module" src="./js/contactanos.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="./js/formulario.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-
 </body>
+
 <footer style="background-color: #FF4545; border: solid;" class="footer">
     <div style="background-color: #0078CF;">
         <img src="./img/logo.png" class="footer-logo">
