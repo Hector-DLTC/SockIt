@@ -1,9 +1,9 @@
-#footer-logo{
+.footer-logo{
     height: 50px;
     width: 100;
     border-radius: 10px;
     border:solid;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     margin-bottom: 0.5rem;
     margin-left: 45%;
 }
@@ -12,10 +12,77 @@
     width: 100;
     border-radius: 10px;
     border:solid;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     margin-bottom: 0.5rem;
    
 }
-footer{
+.footer{
     font-family: Verdana;
+}
+
+.links-footer{
+    text-align: center;
+    margin-top: 0.8rem;
+    font-size: medium;
+}
+
+@media (max-width:991px) {
+    .footer-logo{
+        height: 40px;
+        width: 100;
+        border-radius: 10px;
+        border:solid;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        margin-left: 40%;
+    }
+
+    .footer-logo2{
+        height: 40px;
+        width: 90;
+        border-radius: 10px;
+        border:solid;
+        margin-top: 1rem;
+        margin-bottom: 0.4rem;
+       
+    }
+    .links-footer{
+        text-align: center;
+        margin-top: 0.8rem;
+        font-size: small;
+    }
+
+    .footer{
+        font-size: small;
+    }
+}
+
+@media (max-width:500px) {
+    
+    .footer-logo{
+        height: 40px;
+        width: 90;
+        border-radius: 10px;
+        border:solid;
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+        margin-left: 35%;
+    }
+    .footer-logo2{
+        height: 40px;
+        width: 90;
+        border-radius: 10px;
+        border:solid;
+        margin-top: 1rem;
+        margin-bottom: 0.3rem;
+       
+    }
+    .links-footer{
+        text-align: center;
+        margin-top: 0.8rem;
+        font-size: x-small;
+    }
+    .footer{
+        font-size: x-small;
+    }
 }

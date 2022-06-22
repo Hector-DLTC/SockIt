@@ -1,7 +1,7 @@
 
 //JSON
-let products = [
-    {
+let products = [{
+
     "id": 1,
     "brand": "Happy Socks",
     "price": 109.95,
@@ -9,7 +9,7 @@ let products = [
     "category": "largos",
     "image": "https://m.media-amazon.com/images/I/61OUwrv4dpL._AC_UL1000_.jpg",
     "color": "white" 
-    },
+},
     {
         "id": 2,
         "brand": "Pantherella",
@@ -102,3 +102,150 @@ let products = [
     }
 
 ]
+
+// function addItem(products){
+//     const itemHTML = '<div class="card" style="width: 18rem;">\n' +
+//         '    <img src="'+products.image +'" class="card-img-top" alt="image">\n' +
+//         '    <div class="card-body">\n' +
+//         '        <h5 class="card-title">'+products.brand+'</h5>\n' +
+//         '        <h6 class="card-title">'+products.category+'</h6>\n' +
+//         '        <p class="card-text">'+products.description+'</p>\n' +
+//         '        <p class="card-text">'+products.price+'</p>\n' +
+//         '        <a href="#" class="btn btn-primary">Add</a>\n' +
+//         '    </div>\n' +
+//         '</div>\n' +
+//         '<br/>';
+//     const itemsContainer = document.getElementById("list-items");
+//     itemsContainer.innerHTML += itemHTML;
+// }
+
+
+
+// addItem({'brand':'Happy Socks',
+//     'image':'https://m.media-amazon.com/images/I/61OUwrv4dpL._AC_UL1000_.jpg',
+//     'description':'Panther, 1 par, 85 % cachemir, altura hasta la rodilla',
+//     'price':'1120',
+//     'category':'Large'
+// });
+// addItem({'brand':'Pantherella',
+//     'image':'https://m.media-amazon.com/images/I/81BvqZs1BlL._AC_UL1500_.jpg',
+//     'description':'Happy Socks Party Animal Singing Birthday Gift Box Calcetines para Mujer',
+//     'price':'1120',
+//     'category':'Hasta la rodilla'
+// });
+// addItem({'brand':'Stance',
+//     'image':'https://m.media-amazon.com/images/I/81J0mLhOnQL._AC_UL1500_.jpg',
+//     'description':'Stance Hombres Calcetines The Fourth',
+//     'price':'1120',
+//     'category':'Hasta la rodilla'
+// });
+// addItem({'brand':'Gallo',
+//     'image':'https://m.media-amazon.com/images/I/71iNKN5TZIL._AC_UL1500_.jpg',
+//     'description':'Gallo Calcetines largos vestir hombre rayas colores',
+//     'price':'1120',
+//     'category':'Hasta la rodilla'
+// });
+// addItem({'brand':'K-BELL',
+//     'image':'https://m.media-amazon.com/images/I/81JaehXDL+L._AC_UL1500_.jpg',
+//     'description':'K. Bell azul calcetines de mujer',
+//     'price':'1120',
+//     'category':'largos'
+// });
+// addItem({'brand':'Carter',
+//     'image':'https://m.media-amazon.com/images/I/812AhQT8-yL._AC_UL1500_.jpg',
+//     'description':'Simple Joys by Carter Calcetines Deportivos Bebé-Niños, Pack de 12',
+//     'price':'1120',
+//     'category':'cortos'
+// });
+// addItem({'brand':'PUMA',
+//     'image':'https://m.media-amazon.com/images/I/81M9mOv4YJS._AC_SL1500_.jpg',
+//     'description':'PUMA Calcetines de corte bajo para hombre, 8 unidades',
+//     'price':'1120',
+//     'category':'cortos'
+// });
+// addItem({'brand':'PUMA',
+//     'image':'https://m.media-amazon.com/images/I/81M9mOv4YJS._AC_SL1500_.jpg',
+//     'description':'PUMA Calcetines de corte bajo para hombre, 8 unidades',
+//     'price':'1120',
+//     'category':'cortos'
+// });
+// addItem({'brand':'PUMA',
+//     'image':'https://m.media-amazon.com/images/I/81M9mOv4YJS._AC_SL1500_.jpg',
+//     'description':'PUMA Calcetines de corte bajo para hombre, 8 unidades',
+//     'price':'1120',
+//     'category':'cortos'
+// });
+// addItem({'brand':'PUMA',
+//     'image':'https://m.media-amazon.com/images/I/81M9mOv4YJS._AC_SL1500_.jpg',
+//     'description':'PUMA Calcetines de corte bajo para hombre, 8 unidades',
+//     'price':'1120',
+//     'category':'cortos'
+// });
+// addItem({'brand':'PUMA',
+//     'image':'https://m.media-amazon.com/images/I/81M9mOv4YJS._AC_SL1500_.jpg',
+//     'description':'PUMA Calcetines de corte bajo para hombre, 8 unidades',
+//     'price':'1120',
+//     'category':'cortos'
+// });
+// for (let i = 0; i < JSON.parse(id); i++){
+// addItem(`${brand} + ${image} + ${description} + ${price} + ${category} `
+// )};
+
+// let data = JSON.stringify(products);
+
+// for (let key in data.id){
+//     console.log(key, data.id[0]);
+// }
+let rowProds = document.getElementById("list-items")
+function doProduct(prod){rowProds.innerHTML += `<div class="col-md-4">
+<div class="card mb-4 shadow-sm">
+    <img src="${prod.image}" style = "display:flex" />
+    <div class="card-body">
+      <p class="card-text"><strong>${prod.brand}</strong></p>
+      <p class="card-text">${prod.description}</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+        </div>
+        <small class="text-muted">$${prod.price}</small>
+      </div>
+    </div>
+  </div>
+</div>
+</div> `
+};//doProduct
+
+const getData = () => {
+    return fetch (products, {
+        method: "GET"
+    });
+}
+
+// async function accessData(){
+//     try{
+//         let response = await getData();
+//         response.json().then((data)=> {
+//            data.forEach(element => {
+//                doProduct(element);
+//            });
+//             doProduct(data);
+//         });
+//     } catch(err){
+//         console.log("catch", err);
+//     }//catch
+// }//async function
+// accessData();
+
+
+
+function accessData(){
+        let response = getData();
+        response.json().then((data)=> {
+           data.forEach(element => {
+               doProduct(element);
+           });
+            doProduct(data);
+        });
+    }//async function
+accessData();

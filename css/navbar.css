@@ -1,39 +1,79 @@
- #catalogo{color: white;}
- #contactanos{color: white;}
- #nosotros{color: white;}
- #iniciarRegistro{color: white;}
-
-#iniciar{color: white;}
-#registro{color: white;}
-
-.nav-item{
-
-    font-size: larger;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-shadow:0 0 1px black;
-    border-radius:5%;
-    margin:15px;
-    display:flex;
-    justify-content: center;
-}
-.nav-item:hover{
-    background-color: rgba(245, 46, 46, 0.897);
-    
-
-}
-.dropdown-item:hover{
-    background-color: rgba(245, 46, 46, 0.897);  
-}
-.dropdown-item{
-    font-size: larger;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-shadow:0 0 1px black;
-    border-radius:5%;
-    justify-content: center;
-}
-
-.navbar{
-    box-shadow: -.1px 10px;
-}
+ #catalogo {
+     color: white;
+ }
+ 
+ #contactanos {
+     color: white;
+ }
+ 
+ #nosotros {
+     color: white;
+ }
+ 
+ #iniciarRegistro {
+     color: white;
+ }
+ 
+ #iniciar {
+     color: white;
+ }
+ 
+ #registro {
+     color: white;
+ }
+ 
+ .nav-item {
+     font-size: larger;
+     font-weight: bold;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     text-shadow: 0 0 1px black;
+     border-radius: 5%;
+     margin: 15px;
+     display: flex;
+     justify-content: center;
+ }
+ 
+ .nav-item:hover {
+     background-color: rgba(245, 46, 46, 0.897);
+ }
+ 
+ .dropdown-item:hover {
+     background-color: rgba(245, 46, 46, 0.897);
+ }
+ 
+ .dropdown-item {
+     font-size: larger;
+     font-weight: bold;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     text-shadow: 0 0 1px black;
+     border-radius: 5%;
+     justify-content: center;
+ }
+ 
+ .navbar {
+     box-shadow: -.1px 10px;
+ }
+ 
+ @media (max-width: 991px) {
+     .dropdown-item {
+         font-size: medium;
+     }
+     .nav-link {
+         font-size: medium;
+     }
+     .dropdown-item:hover .nav-item:hover .nav-item .navbar .facet_sidebar {
+         display: none;
+     }
+ }
+ 
+ @media (max-width: 500px) {
+     .dropdown-item {
+         font-size: x-small;
+     }
+     .nav-link {
+         font-size: x-small;
+     }
+     .dropdown-item:hover .nav-item:hover .nav-item .navbar .facet_sidebar {
+         display: none;
+     }
+ }
