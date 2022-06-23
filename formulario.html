@@ -10,6 +10,7 @@
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/formulario.css">
     <title>FORMULARIO</title>
 </head>
 <header>
@@ -55,34 +56,38 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-8 mx-md-auto mt-5">
-                <form class="px-2 px-sm-5 py-5">
+                <form action="" class="formulario" id="formulario">
                     <a href="./catalogo.html" style="color: blue;">Regresar</a>
 
                     <h1 class="titulo">Agregar producto</h1>
 
 
-                    
+
 
                     <div class="form-group">
                         <label for="username">Producto: </label>
                         <input type="text" class="form-control" id="product" placeholder="Producto " maxlength="15" required>
+                        <small id="productoHelp" class="form-text">No utilices caracteres especiales</small>
                     </div>
+
+
 
                     <div class="form-group">
                         <label for="textbox">Describe tu producto </label>
                         <textarea maxlength="280" name="textBox" cols="45" rows="10" class="form-control" id="textdesc" placeholder="Límite de 280 carácteres " required></textarea>
 
-                        <small id="textBoxHelp" class="form-text">Máximo 256 Carácteres</small>
+                        <small id="textdescBoxHelp" class="form-text">Máximo 256 Carácteres</small>
                     </div>
 
 
                     <div class="form-group">
-                        <label >Precio</label>
+                        <label>Precio</label>
                         <input type="text" class="form-control" id="precio" placeholder="precio " maxlength="7" minlength="1" required>
+                        <small id="precioHelp" class="form-text">No utilices letras, utilza solo numeros.</small>
                     </div>
 
                     <label for="fileImage">Selecciona una imagen:</label>
-                    <input type="button" class="form-control btn-primary" value="Subir imagen" id="btnFake"> 
+                    <input type="button" class="form-control btn-primary" value="Subir imagen" id="btnFake">
                     <input type="file" class="form-control-file" id="fileImage" style="display:none">
 
                     <div class="col-6">
