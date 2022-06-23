@@ -5,11 +5,13 @@ let Precio = document.getElementById("precio");
 
 let jsonStr ='{"Items":[]}';
 
-
+console.log(jsonStr);
 let obj = JSON.parse(jsonStr);
+console.log(obj);
 
 Agregar.addEventListener("click", (event) => {
     event.preventDefault();
+    
     if([Producto.value,Descripcion.value,Precio.value].includes("")){
         console.log("Hay al menos un campo vacio...");
         //Aqui van las validaciones....
@@ -23,6 +25,7 @@ Agregar.addEventListener("click", (event) => {
 window.addEventListener("load", function(){
     if(["Items"]!=null){
         console.log(JSON.parse(localStorage.getItem("jsonStr")));
-        obj=JSON.parse(localStorage.getItem("jsonStr"));
+        let objtmp=JSON.parse(localStorage.getItem("jsonStr"));
+        obj=(objtmp!=null)?objtmp:obj;
     }
 });
