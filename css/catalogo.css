@@ -26,6 +26,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: #0096FF; 
+    border: solid; 
+    border-radius: 5%;
 }
 
 .card-content {
@@ -48,8 +51,8 @@ body {
     overflow: hidden;
 }
 
-.card-image {
-    max-height: 200px;
+.card-image-top{
+    
 }
 
 .card-image img {
