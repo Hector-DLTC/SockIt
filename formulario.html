@@ -56,7 +56,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-8 mx-md-auto mt-5">
-                <form action="" class="formulario" id="formulario">
+                <form class="px-2 px-sm-5 py-5">
                     <a href="./catalogo.html" style="color: blue;">Regresar</a>
 
                     <h1 class="titulo">Agregar producto</h1>
@@ -74,7 +74,7 @@
 
                     <div class="form-group">
                         <label for="textbox">Describe tu producto </label>
-                        <textarea maxlength="280" name="textBox" cols="45" rows="10" class="form-control" id="textdesc" placeholder="Límite de 280 carácteres " required></textarea>
+                        <textarea maxlength="140" name="textBox" cols="45" rows="10" class="form-control" id="textdesc" placeholder="Límite de 280 carácteres " required></textarea>
 
                         <small id="textdescBoxHelp" class="form-text">Máximo 256 Carácteres</small>
                     </div>
@@ -86,20 +86,32 @@
                         <small id="precioHelp" class="form-text">No utilices letras, utilza solo numeros.</small>
                     </div>
 
-                    <label for="fileImage">Selecciona una imagen:</label>
-                    <input type="button" class="form-control btn-primary" value="Subir imagen" id="btnFake">
-                    <input type="file" class="form-control-file" id="fileImage" style="display:none">
+                    <div class="row">
+                        <div class="col-3">
+                            <form>
+                                <div class="form-group">
+                                    <label for="fileImage">Selecciona una imagen:</label>
+                                    <input type="button" class="form-control btn-primary" value="Subir imagen" id="btnFake" style="height: 40px; width: 125px;">
 
-                    <div class="col-6">
-                        <img id="imageFile" name="imageFile" src="" alt="Vista previa de la imagen" title="Vista previa de la imagen" />
+                                    <input type="file" class="form-control-file" id="fileImage" style="display:none">
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-6">
+                            <img id="imageFile" name="imageFile" src="" alt="Vista previa de la imagen" title="Vista previa de la imagen" style="max-height: 200px; max-width: 200px;" />
+                        </div>
+                        <!--col-6-->
+                    </div>
+                    <!--row-->
+                    <div class="row">
+                        <div class="col-10">
+                            <textarea rows="20" class="form-control" data-toggle="tooltip" data-placement="bottom" id="inputFile" name="inputFile" value="" placehodler="Imagen del curso" title="Imagen" style="display:none"></textarea>
+                        </div>
                     </div>
 
-                    <br>
 
-
-                    <button type="submit" id="btnproducto" class="btn d-block mx-auto" style="background-color: red;">Agregar</button>
-
-
+                    <button type="submit" id="btnproducto" class="btn d-block mx-auto" style="color: white; background-color: red; margin-bottom: 1rem;">Agregar</button>
 
                 </form>
             </div>
@@ -109,7 +121,6 @@
 
 
 
-    <script src="./js/formulario.js"></script>
     <script src="./js/productosJSON.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
