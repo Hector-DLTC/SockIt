@@ -20,5 +20,27 @@ function addItem(products){
 }
 //iteracion de funcion addItem
 for(let data of products.Items){
-    addItem(data)
+    addItem(data);
+}
+//Modal Carrito
+let modal=document.getElementById("idCarritoModal");
+let modalBtn=document.getElementById("btnCarritoModal");
+let btnCerrarModal=document.getElementsByClassName("btnCerrarModal")[0];
+
+modalBtn.addEventListener("click", abrirModal);
+btnCerrarModal.addEventListener("click",cerrarModal);
+window.addEventListener("click", clickFueraModal);
+
+function clickFueraModal(e){
+    if(e.target==modal){
+        modal.style.display="none";
+    }
+}
+
+function abrirModal(){
+    modal.style.display="block";
+}
+
+function cerrarModal(){
+    modal.style.display="none";
 }

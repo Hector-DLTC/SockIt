@@ -58,11 +58,27 @@
 </header>
 
 <body>
-<div>
-<strong style="font-size: xx-large; margin-left: 1%;">Catalogo</strong>  
-<button class="buttform" onclick="location.href='./formulario.html'" > <a class="textbutt"> Agregar productos </a></button>
+<div style="text-align:right; margin:2%;">
+    <i id="btnCarritoModal"class="bi bi-cart4" style="font-size: xx-large;"></i>
 </div>
-
+<div id="idCarritoModal"class="carritoModal">
+    <div class="contenidoModalCarrito">
+        <div class="headerModal">
+            <span class="btnCerrarModal">&times;</span>
+            <h2>Carrito de compras:</h2>
+        </div>
+        <div class="bodyModal">
+            <p>Carrito Perron 1 Link Mega No Fake</p>
+            <p>Carrito Perron 1 Link Mega No Fake</p>
+            <p>Carrito Perron 1 Link Mega No Fake</p>
+            <p>Carrito Perron 1 Link Mega No Fake</p>
+            <p>Carrito Perron 1 Link Mega No Fake</p>    
+        </div>
+        <div class="footerModal">
+            <h3>Total:</h3>
+        </div>
+    </div>
+</div>
 <div >
     <div class="album py-5 bg-light">
         <div class="container">
@@ -107,7 +123,9 @@
 
     </div> -->
 
-
+    <div>
+        <button class="buttform" onclick="location.href='./formulario.html'" > <a class="textbutt"> Agregar productos </a></button>
+    </div>
 
 
     <!-- Optional JavaScript -->
