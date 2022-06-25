@@ -3,7 +3,7 @@ body {
 }
 
 .buttform{
-    margin-left: 60%;
+    margin-right: 5%;
     border-radius: 10%;
     margin: 1%;
     margin-left: 75%;
@@ -16,11 +16,11 @@ body {
 
 .textbutt{
     font-size: large;
-    text-align: center;
+    text-align: auto;
     margin-bottom: 50%;
 }
 
-.container {
+/* .container {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -29,7 +29,9 @@ body {
     background-color: #0096FF; 
     border: solid; 
     border-radius: 5%;
-}
+   
+} */
+
 
 .card-content {
     display: flex;
@@ -51,9 +53,6 @@ body {
     overflow: hidden;
 }
 
-.card-image-top{
-    
-}
 
 .card-image img {
     max-width: 100%;
@@ -70,9 +69,129 @@ body {
     font-size: 1.8em;
     font-weight: 800;
     margin-bottom: 5px;
+    
 }
 
 .card-info p {
     font-size: 1em;
     margin-bottom: 5px;
+}
+
+.bi-cart4{
+    cursor: pointer;
+}
+.bi-cart4:hover{
+    color: white;
+}
+
+.carritoModal{
+    display:none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.headerModal{
+    background-color: #0096FF;
+    color: white;
+    box-shadow:  5px;
+    padding: 15px;
+}
+.footerModal{
+    background-color: #0096FF;
+    color: white;
+    box-shadow:5px;
+    padding: 15px;
+}
+.footerModal h3{
+    margin-top: 13px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 8px black;
+}
+.headerModal h2{
+    margin-top: 13px;
+    text-shadow: 0 0 8px black;
+    
+}
+.bodyModal{
+    padding: 4% 6%;
+}
+
+.contenidoModalCarrito{
+    background-color: #f4f4f4;
+    margin: 10% 1% 5% 48%;
+    /* margin:20% auto; */
+    width: 35%;
+    /* height: 80%; */
+    /* text-align: right; */
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name:abrirModal;
+    animation-duration: 1s;
+}
+.btnCerrarModal{
+    color: red;
+    float: right;
+    font-size: 40px;
+}
+.btnCerrarModal:hover,.btnCerrarModal:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+@keyframes abrirModal {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@media (max-width:991px){
+    .buttform{
+        margin-left: 85%;
+        width: auto;
+    }
+    .textbutt{
+        font-size: small;
+    }
+}
+@media (max-width:780px){
+    .contenidoModalCarrito{
+        margin: 10%;
+        width: auto;
+    }
+}
+@media (max-width:515px){
+    .buttform{
+        margin-left: 80%;
+    }
+    .textbutt{
+        font-size: small;
+    }
+    .headerModal h2{
+        font-size: large;
+    }
+    .footerModal h3{
+        font-size: large;
+    }
+    .bodyModal{
+        font-size: small;
+    }
+}
+
+@media (max-width:400px){
+    .buttform{
+        margin-left: 75%;
+    }
+    .textbutt{
+        font-size: small;
+    }
+}
+@media (max-width:315px){
+    .buttform{
+        margin-left: 70%;
+    }
+    .textbutt{
+        font-size: small;
+    }
 }
