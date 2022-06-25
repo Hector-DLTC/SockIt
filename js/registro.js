@@ -4,6 +4,10 @@ let txtUsername = document.getElementById("username");
 let txtEmailreg = document.getElementById("emailreg");
 let txtPassword= document.getElementById("password");
 let txtPasswordConfirm = document.getElementById("passwordConfirm");
+let confirm=false;
+
+let regis='{"Registro":[]}';
+let regisJson=JSON.parse(regis);
 
 const inputs = document.querySelectorAll('input');
 
@@ -29,70 +33,63 @@ function validate(field, regex) {
   } 
 }
 
-registrar.addEventListener("click", (event) => {
-  event.preventDefault();
-  if (
-    !validarUsername(txtUsername) ||
-    !validarPassword(txtPassword) ||
-    !validarPasswordConfirm(txtPasswordConfirm) ||
-    !validarEmailreg(txtEmailreg)
-  ) {
-    if (!validarUsername(txtUsername)) {
-      txtUsername.style.border = "red medium solid";
-      txtUsername.value = "";
-      txtUsername.focus();
-    } 
+registrar.addEventListener("click",(event)=>{
+    event.preventDefault();
+    regis='{"Registro":[{user:,email:,password:,}]}';
+    
+    if (
+        !validarUsername(txtUsername) ||
+        !validarPassword(txtPassword) ||
+        !validarPasswordConfirm(txtPasswordConfirm) ||
+        !validarEmailreg(txtEmailreg)
+      ) {
+        
+        
+        if (!validarUsername(txtUsername)) {
+          txtUsername.style.border = "red medium solid";
+        //   txtUsername.value = "";
+          txtUsername.focus();
+        } 
+        console.log(txtUsername.value);
+        if (!validarEmailreg(txtEmailreg)) {
+          txtEmailreg.style.border = "red medium solid";
+          txtEmailreg.focus();
+        } 
+    
+        if (!validarPassword(txtPassword)) {
+          txtPassword.style.border = "red medium solid";
+          txtPassword.focus();
+        } 
+        console.log(txtPassword.value);
+        if (!validarPasswordConfirm(txtPasswordConfirm)) {
+            txtPasswordConfirm.style.border = "red medium solid";
+            txtPasswordConfirm.focus();
+        }console.log(txtPasswordConfirm.value);
+        if([txtUsername.value,txtEmailreg.value,txtPassword.value,txtPasswordConfirm.value].includes("")){
+            console.log("Hay al menos un campo vacio...");
+        }if(txtPassword.value!=txtPasswordConfirm.value){
+            console.log("Las contraseñas no son iguales..."); 
+            confirm=true;
+        }
+        if(confirm=true) {
+            regisJson["Registro"].push({user:`${txtUsername.value}`,email:`${txtEmailreg.value}`,password:`${txtPassword.value}`});
+            localStorage.setItem("regis",regis=JSON.stringify(regisJson));
+            
+        }
+        
+        
+    }
+    location.reload();
+    
+    
+});
 
-    if (!validarEmailreg(txtEmailreg)) {
-      txtEmailreg.style.border = "red medium solid";
-      txtEmailreg.focus();
-    } 
+window.addEventListener("load",function(){
+    if(["Registro"]!=null){
+        console.log(JSON.parse(localStorage.getItem("regis")));
+        let regisTmp=JSON.parse(localStorage.getItem("regis"));
+        regisJson=(regisTmp!=null)?regisTmp:regisJson;
 
-    if (!validarPassword(txtPassword)) {
-      txtPassword.style.border = "red medium solid";
-      txtPassword.focus();
-    } 
-    if (!validarPasswordConfirm(txtPasswordConfirm)) {
-        txtPasswordConfirm.style.border = "red medium solid";
-        txtPasswordConfirm.focus();
-      } 
+    }
 
-    return;
-
-  } 
-  sendEmail(txtUsername, txtEmailreg, txtPassword, txtPasswordConfirm);
-  
-  const inputs = document.querySelectorAll('input');
-  inputs.forEach(input => {
-    input.value = '';
-    txtUsername.style.border = "";
-    txtEmailreg.style.border = "";
-    txtPassword.style.border = "";
-    txtPasswordConfirm.style.border = "";
-  });
-}); 
-
-
-
-function sendEmail() {
-  Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "sockitteam3@gmail.com",
-    Password: "59BE6EC9FA97D2E6B92C95FDAD31261AC949",
-    To: ["kazuominakata@gmail.com", "torresvaldezluismiguel@gmail.com", "agustin.moreno.lll@gmail.com","claudio.empire.25@gmail.com", "hectoradltc@gmail.com", "TorresValdezLuisMiguel@gmail.com"],
-    From: "sockitteam3@gmail.com",
-    Subject: "Correo nuevo",
-    Body: `<ul>Nombre: ${txtUsername.value} <br/> 
-    Email: ${txtEmailreg.value} <br/> 
-    Teléfono: ${txtPassword.value}<br/> 
-    Mensaje: ${txtPasswordConfirm.value}</ul>`,
-  }).then((message) => Swal.fire({
-          position: 'center',
-          icon: 'success',
-          title: 'Correo enviado!',
-          showConfirmButton: false,
-          timer: 2000
-        }));
-}
-
-
+});
