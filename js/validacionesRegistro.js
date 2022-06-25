@@ -3,7 +3,7 @@
 
 //Validar usuario:
 export function validarUsername(txtUsername){
-const nombre  =/^[^0-9][a-zA-ZÀ-ÿ\u00f1\u00d10-9]{2,15}$/i;
+const nombre  =/^[^0-9][a-zA-Z\u00f1\u00d10-9]{2,15}$/i;
  if (!nombre.test(txtUsername.value)){
     return false;
  }else {
