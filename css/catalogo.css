@@ -20,7 +20,7 @@ body {
     margin-bottom: 50%;
 }
 
-.container {
+/* .container {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -29,7 +29,9 @@ body {
     background-color: #0096FF; 
     border: solid; 
     border-radius: 5%;
-}
+   
+} */
+
 
 .card-content {
     display: flex;
@@ -51,9 +53,6 @@ body {
     overflow: hidden;
 }
 
-.card-image-top{
-    
-}
 
 .card-image img {
     max-width: 100%;
@@ -70,9 +69,11 @@ body {
     font-size: 1.8em;
     font-weight: 800;
     margin-bottom: 5px;
+    
 }
 
 .card-info p {
     font-size: 1em;
     margin-bottom: 5px;
 }
+
