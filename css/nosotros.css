@@ -1,47 +1,46 @@
-
-
-.row{
-    margin-left:8%;
+.row {
+    margin-left: 8%;
     margin-right: 3%;
     margin-top: 5%;
     margin-bottom: 5%;
 }
-.featurette{
+
+.featurette {
     max-height: 240px;
-
 }
-.card{
+
+.card {
     background-color: #4A95FE;
-    box-shadow: -10px 10px ;
-    
+    box-shadow: -10px 10px;
 }
-@keyframes example {
-    from {background-color:#4A95FE;}
-    to {background-color: #FF0300;}
 
-  }
-.card:hover{
+@keyframes example {
+    from {
+        background-color: #4A95FE;
+    }
+    to {
+        background-color: #FF0300;
+    }
+}
+
+.card:hover {
     background-color: #FF0300;
     transition-delay: 500ms;
-
     animation-name: example;
     animation-duration: .5s;
     animation-iteration-count: 1;
-    
-    
-    
 }
 
-.card-text{
+.card-text {
     width: 250px;
     height: 100px;
     overflow: auto;
     text-align: justify;
-    color:white;
-    
-
+    color: white;
+    text-align: justify;
 }
-.card-img-top{
+
+.card-img-top {
     width: auto;
     height: 250px;
     overflow: hidden;
@@ -50,15 +49,111 @@
     box-shadow: -3px 3px;
     border-color: white;
     color: black;
-    
 }
-.card-title{
+
+.card-title {
     text-align: center;
     height: 50px;
     color: white;
+    text-align: center;
 }
-.btn-primary{
+
+.btn-primary {
     margin-left: 30%;
     box-shadow: -5px 5px;
     color: black;
+}
+
+.carousel-item :active {
+    overflow-x: scroll;
+}
+
+.lead {
+    text-align: justify;
+}
+
+.container-marketing {
+    display: flex;
+}
+
+@media (max-width: 991px) {
+    .carousel-slide {
+        display: flow-root;
+    }
+    .card-img-top {
+        width: 55%;
+        height: 55%;
+        overflow: hidden;
+        border-radius: 50%;
+        border: solid;
+        box-shadow: -3px 3px;
+        border-color: white;
+        color: black;
+        align-content: center;
+        margin-left: 25%;
+    }
+    .card {
+        display: flexbox;
+    }
+    .card-title {
+        text-align: center;
+        height: 55%;
+        color: white;
+        font-size: medium;
+    }
+    .card-text {
+        font-size: medium;
+    }
+    .btn-primary {
+        width: auto;
+        font-size: medium;
+    }
+    .text-muted {
+        font-size: small;
+    }
+    .lead {
+        font-size: medium;
+    }
+    .col-sm-3 .col-md-5 .col-md-5 {
+        width: 50%;
+        height: 66%;
+    }
+}
+
+@media (max-width: 500px) {
+    .carousel-slide {
+        display: flex;
+    }
+    .card-img-top {
+        width: 33%;
+        height: 33%;
+        overflow: hidden;
+        border-radius: 50%;
+        border: solid;
+        box-shadow: -3px 3px;
+        border-color: white;
+        color: black;
+    }
+    .card-title {
+        text-align: center;
+        height: 33%;
+        color: white;
+        font-size: small;
+    }
+    .card-text {
+        font-size: x-small;
+        text-align: justify;
+    }
+    .text-muted {
+        font-size: small;
+    }
+    .btn-primary {
+        font-size: small;
+    }
+    .lead {
+        font-size: small;
+    }
+    .featurette-heading {
+        font-size: small;
+    }
 }

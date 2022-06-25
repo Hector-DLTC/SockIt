@@ -1,37 +1,37 @@
-<<<<<<< HEAD
 let fileImage = document.getElementById('fileImage');
-	let btnFake = document.getElementById('btnFake');
-	let imageFile = document.getElementById('imageFile');
+let btnFake = document.getElementById('btnFake');
+let imageFile = document.getElementById('imageFile');
 
-	btnFake.addEventListener('click', function(){
-		fileImage.click();
-    });
-    fileImage.addEventListener('change', function(){
-        previewFile('imageFile', 'fileImage', 'inputFile' )
+btnFake.addEventListener('click', function() {
+    fileImage.click();
+});
+fileImage.addEventListener('change', function() {
+    previewFile('imageFile', 'fileImage', 'inputFile')
         //previewFile(id imagen, input type file , textArea);
-    });
+});
 
-		//previewFile(id imagen, input type file , textArea);
-		function previewFile(img, inputFile, input) {
-			
-			var preview = document.getElementById(img);
-			var file    = document.getElementById(inputFile).files[0];
-			var reader  = new FileReader();
+//previewFile(id imagen, input type file , textArea);
+function previewFile(img, inputFile, input) {
 
-			reader.addEventListener("load", function () {
-				document.getElementById(input).value = reader.result;
-		  		preview.src = reader.result;
-		  	}, false);
-			
-		  	if (file) {
-		    	reader.readAsDataURL(file);
-		  	}// file
-		}// previewFile 
-=======
+    var preview = document.getElementById(img);
+    var file = document.getElementById(inputFile).files[0];
+    var reader = new FileReader();
+
+    reader.addEventListener("load", function() {
+        document.getElementById(input).value = reader.result;
+        preview.src = reader.result;
+    }, false);
+
+    if (file) {
+        reader.readAsDataURL(file);
+    } // file
+} // previewFile 
+
+
+
 let producto = document.getElementById("product");
 let descripcion = document.getElementById("textdesc");
 let precioItem = document.getElementById("precio");
-let imagen = document.getElementById("fileImage");
 let agregar = document.getElementById("btnproducto")
 
 
@@ -40,7 +40,7 @@ const inputs = document.querySelectorAll('input');
 const patterns = {
     product: /^[a-zA-ZÀ-ÿ\u00f1\u00d1]{2,15}[^0-9]$/i,
     textdesc: /^[a-zA-ZÀ-ÿ\u00f1\u00d1]{2,60}[^0-9]$/i,
-    precio: /^[0-9]{4}$/
+    precio: /^[0-9]{1,4}[^a-zA-ZÀ-ÿ]$/
 };
 
 inputs.forEach((input) => {
@@ -80,7 +80,7 @@ function validarDescripcion(textdesc) {
 
 
 function validarPrecio(precio) {
-    const precios = /^[0-9]{4}$/;
+    const precios = /^[0-9]{1,4}$/;
     if (!precios.test(precio.value)) {
         return false;
     } else {
@@ -117,6 +117,8 @@ agregar.addEventListener("click", (event) => {
 
 
     }
+    location.reload();
+
     const inputs = document.querySelectorAll('input');
     inputs.forEach(input => {
         //input.value = '';
@@ -125,4 +127,3 @@ agregar.addEventListener("click", (event) => {
         precio.style.border = "";
     });
 });
->>>>>>> agustin
