@@ -6,7 +6,7 @@ function addItem(products){
     console.log(products);
     const itemHTML = 
         '<div class="card" style="width: 20%; min-width:150px; margin:10px;">\n' +
-        '    <img src="'+products.img +'" class="card-img-top" alt="image" style="height: auto;max-width: 100%;vertical-align: middle;">\n' +
+        '    <img src="'+products.img +'" class="card-img-top" alt="image" style="height: 250px;max-width: 100%;vertical-align: middle;">\n' +
         '    <div class="card-body">\n' +
         '        <h5 class="card-title">'+products.product+'</h5>\n' +
         // '        <h6 class="card-title">'+products.category+'</h6>\n' +
