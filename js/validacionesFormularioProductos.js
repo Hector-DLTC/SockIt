@@ -3,7 +3,7 @@
 
 //Validar usuario:
 export function validarNombreProducto(txtProductName){
-    const nombreProducto  = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]{2,15}[^0-9]$/i
+    const nombreProducto  = /^[a-zA-ZÀ-ÿ\u00f1\u00d1\s]{2,15}[^0-9]$/i
      if (!nombreProducto.test(txtProductName.value)){
         return false;
      }else {
@@ -13,7 +13,7 @@ export function validarNombreProducto(txtProductName){
     
     // Validar Email: 
     export function validarDescripcionProducto(txtProductDescription){
-        const descripcionProducto  = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]{2,60}[^0-9]$/i
+        const descripcionProducto  = /^[a-zA-Z0-9]+[a-zA-Z0-9\s]*$/i
          if (!descripcionProducto.test(txtProductDescription.value)){
             return false;
          }else {

@@ -3,8 +3,8 @@ import {validarNombreProducto, validarDescripcionProducto, validarPrecioProducto
 const inputs = document.querySelectorAll('input');
 
 const patterns = {
-    product: /^[a-zA-ZÀ-ÿ\u00f1\u00d1]{2,15}[^0-9]$/i,
-    textdesc: /^[a-zA-ZÀ-ÿ\u00f1\u00d1]{2,15}[^0-9]$/i,
+    product: /^[a-zA-ZÀ-ÿ\u00f1\u00d1\s]{2,15}[^0-9]$/i, 
+    textdesc: /^[a-zA-Z0-9]+[a-zA-Z0-9\s]*$/i,
     precio: /^[0-9]{1,4}$/
 };
 
