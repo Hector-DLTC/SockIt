@@ -3,17 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'>
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/index.css"> 
-    <title>INICIO </title>
+    <link rel="stylesheet" href="./css/Login.css">
+   
+    <title>Inicio de sesíon</title>
 </head>
 <header>
- 
+
+
+
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #0096FF;">
         <a class="navbar-brand" href="./index.html">
             <img src="./img/logo.png" alt="logo" style="width:120px; height: 85px; border-radius: 10%;">
@@ -44,73 +48,46 @@
             </ul>
         </div>
     </nav>
- 
+
 
 
 </header>
 
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 mx-md-auto mt-5" id="caja"  style="background-color:#4a95fe; border-radius: 10%;">
+                <form class="px-2 px-sm-5 py-5">
+                    <a href="./index.html" style="color: white;"> <- Regresar</a>
 
-<!-- Contenido pagina -->
- <h3  class="nombre" ></h3>
-<div class="slider-frame">
+                    <h1 class="titulo">Iniciar sesíon</h1>
+
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input type="text" class="form-control" id="email" placeholder="Email: " required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Contraseña: </label>
+                        <input type="password" class="form-control" id="password" placeholder="Contraseña" maxlength="24" minlength="8" required>
+                    </div>
+
+
+                    <button type="submit" id="btnproducto" class="btn d-block mx-auto" style="background-color: red;">Agregar</button>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
     
-    <ul>    
-        <li><img src="https://media.discordapp.net/attachments/982060205753917531/990031612639051786/unknown.png?width=645&height=430" alt=""></li>
-        <li><img src=" https://media.discordapp.net/attachments/982060205753917531/990031676732223558/unknown.png" alt=""></li>
-        <li><img src="https://media.discordapp.net/attachments/982060205753917531/990031612639051786/unknown.png?width=645&height=430" alt=""></li>
-        <li><img src=" https://media.discordapp.net/attachments/982060205753917531/990031676732223558/unknown.png" alt=""></li>
-    </ul>
-</div>   
-<section class="content about"> 
-    <h4> <h2 class="title"> 🧦 Importancia de unos buenos Calcetines !!! </h2> </h4> 
-    <h4> <p>Los pies son un foco de terminaciones nerviosas,
-        con lo que cualquier sensación que tengamos en ellos se transmitirá a nuestros cuerpo.
-        Por eso hay que elegir para cada actividad unos calcetines adecuados a la misma: </p></h4>  
-        <h4>🧦 Que faciliten la transpiración.</h4>
-        <h4>🧦 Que sean unos calcetines resistentes y duraderos.</h4>
-        <h4>🧦 Que estén diseñados para que no se muevan dentro de nuestras botas o zapatillas y así evitar rozaduras e incomodidades.</h4>
- </section>
-
-     <!--   Tarjetas-->
-<div class="title-cards">
-    <h2>Productos</h2>
-</div>
-<div class="container-card">
-
-<div class="card">
-<figure>
-    <img src="./img/img-catalogo/extra low cut-extra cortos.jpg">
-</figure>
-<div class="contenido-card" >
-    <h3>Más vendido</h3>
-    <p> Modelo 1 Descripción:  Unisex</p>
-    <a href="./catalogo.html">Comprar</a>
-</div>
-</div>
-<div class="card">
-<figure>
-    <img src="./img/img-catalogo/quarter-ankles-normales.jpg">
-</figure>
-<div class="contenido-card">
-    <h3>Mas </h3>
-    <p>Descripción:</p>
-    <a href="./catalogo.html">Comprar</a>
-</div>
-</div>
-<div class="card">
-<figure>
-    <img src="./img/img-catalogo/over th knee-sobre rodilla.jpg">
-</figure>
-<div class="contenido-card">
-    <h3>Modelo 3</h3>
-    <p>Descripción:</p>
-    <a href="./catalogo.html">Comprar</a>
-</div>
-</div>
-</div>
-</div>
-
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
 
 <footer style="background-color: #FF4545; border: solid;" class="footer">
@@ -127,5 +104,5 @@
     </div>
     <p style="text-align: center; margin-top: 0.8rem;"> Condiciones de uso | Aviso de privacidad© 1996-2022 | Sockit.com, Inc. o sus afiliados </p>
 </footer>
-</html>
 
+</html>

@@ -1,88 +1,97 @@
-import {validarProduct, validarEmai, validarTel} from "./validaciones.js";
-let enviar = document.getElementById("btnEnviar")
-let txtNombre = document.getElementById("Name");
-let txtEmail = document.getElementById("email");
-let txtTel = document.getElementById("phone");
+let producto = document.getElementById("product");
+let descripcion = document.getElementById("textdesc");
+let precioItem = document.getElementById("precio");
+let imagen = document.getElementById("fileImage");
+let agregar = document.getElementById("btnproducto")
+
 
 const inputs = document.querySelectorAll('input');
 
 const patterns = {
-  Name: /^[a-zA-ZÀ-ÿ\u00f1\u00d1]{2,15}[^0-9]$/i,
-  email: /^([^0-9][a-zA-Z\d\.-_-\u00f1\u00d1]+)@([a-z\d-][^0-9]+)\.([a-zA-Z]{2,8})(\.[a-zA-Z]{2,8})?$/,
-  phone: /^[0-9]{10}$/
+    product: /^[a-zA-ZÀ-ÿ\u00f1\u00d1]{2,15}[^0-9]$/i,
+    textdesc: /^[a-zA-ZÀ-ÿ\u00f1\u00d1]{2,60}[^0-9]$/i,
+    precio: /^[0-9]{4}$/
 };
 
 inputs.forEach((input) => {
-  input.addEventListener('keyup', (event) => {
-    validate(event.target, patterns[event.target.attributes.id.value]);
-  });
+    input.addEventListener('keyup', (event) => {
+        validate(event.target, patterns[event.target.attributes.id.value]);
+    });
 });
+
 function validate(field, regex) {
-  if (regex.test(field.value)) {
-    
-    return field.className = 'form-control valid';
-    
-  } else {
-    return field.className = 'form-control invalid';
-  } 
+    if (regex.test(field.value)) {
+
+        return field.className = 'form-control valid';
+
+    } else {
+        return field.className = 'form-control invalid';
+    }
 }
 
-enviar.addEventListener("click", (event) => {
-  event.preventDefault();
-  if (
-    !validarNombre(txtNombre) ||
-    !validarTel(txtTel) ||
-    !validarEmail(txtEmail)
-  ) {
-    if (!validarNombre(txtNombre)) {
-      txtNombre.style.border = "red medium solid";
-      txtNombre.value = "";
-      txtNombre.focus();
-    } 
-
-    if (!validarEmail(txtEmail)) {
-      txtEmail.style.border = "red medium solid";
-      txtEmail.focus();
-    } 
-
-    if (!validarTel(txtTel)) {
-      txtTel.style.border = "red medium solid";
-      txtTel.focus();
-    } 
-
-    return;
-
-  } 
-  sendEmail(txtNombre, txtEmail, txtTel, textBox);
-  
-  const inputs = document.querySelectorAll('input, #textBox');
-  inputs.forEach(input => {
-    input.value = '';
-    txtNombre.style.border = "";
-    txtEmail.style.border = "";
-    txtTel.style.border = "";
-  });
-}); 
-
-
-
-function sendEmail() {
-  Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "sockitteam3@gmail.com",
-    Password: "59BE6EC9FA97D2E6B92C95FDAD31261AC949",
-    To: ["kazuominakata@gmail.com", "torresvaldezluismiguel@gmail.com", "agustin.moreno.lll@gmail.com","claudio.empire.25@gmail.com", "hectoradltc@gmail.com", "TorresValdezLuisMiguel@gmail.com"],
-    From: "sockitteam3@gmail.com",
-    Subject: "Correo nuevo",
-    Body: `<ul>Nombre: ${txtNombre.value} <br/> 
-    Email: ${txtEmail.value} <br/> 
-    Teléfono: ${txtTel.value}<br/> 
-    Mensaje: ${textBox.value}</ul>`,
-  }).then((message) => Swal.fire({
-          position: 'center',
-          icon: 'success',
-          title: 'Correo enviado!',
-          showConfirmButton: false,
-          timer: 2000
-        }));
+function validarProducto(product) {
+    const productos = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]{2,15}[^0-9]$/i;
+    if (!productos.test(product.value)) {
+        return false;
+    } else {
+        return true;
+    }
 }
+
+function validarDescripcion(textdesc) {
+    const descripciones = /^[a-zA-ZÀ-ÿ\u00f1\u00d1]{2,15}[^0-9]$/i;
+    if (!descripciones.test(textdesc.value)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+
+
+function validarPrecio(precio) {
+    const precios = /^[0-9]{4}$/;
+    if (!precios.test(precio.value)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+
+
+
+agregar.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (!validarProducto(producto) ||
+        !validarPrecio(precioItem) ||
+        !validarDescripcion(descripcion)
+    ) {
+        if (!validarProducto(producto)) {
+            producto.style.border = "red medium solid";
+            producto.value = "";
+            producto.focus();
+        }
+
+        if (!validarDescripcion(descripcion)) {
+            descripcion.style.border = "red medium solid";
+            descripcion.focus();
+        }
+
+        if (!validarPrecio(precioItem)) {
+            precio.style.border = "red medium solid";
+            precio.focus();
+        }
+
+        return;
+
+
+    }
+    const inputs = document.querySelectorAll('input');
+    inputs.forEach(input => {
+        //input.value = '';
+        product.style.border = "";
+        textdesc.style.border = "";
+        precio.style.border = "";
+    });
+});
