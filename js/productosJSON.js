@@ -1,11 +1,74 @@
+import {validarNombreProducto, validarDescripcionProducto, validarPrecioProducto} from "./validacionesFormularioProductos.js"
+
 let Agregar = document.getElementById("btnproducto");
-let Producto = document.getElementById("product");
-let Descripcion = document.getElementById("textdesc");
-let Precio = document.getElementById("precio");
+let txtProductName = document.getElementById("product");
+let txtProductDescription = document.getElementById("textdesc");
+let txtProductPrice = document.getElementById("precio");
 
 let jsonStr ='{"Items":[]}';
 
-/////////
+
+let obj = JSON.parse(jsonStr);
+// console.log(obj);
+Agregar.addEventListener("click", (event) => {
+    event.preventDefault();
+    jsonStr ='{"Items":[]}';
+   
+	if (
+        !validarNombreProducto(txtProductName) ||
+        !validarDescripcionProducto(txtProductDescription) ||
+        !validarPrecioProducto(txtProductPrice)
+      ) {
+        if (!validarDescripcionProducto(txtProductName)) {
+			txtProductName.style.border = "red medium solid";
+        //   txtUsername.value = "";
+		txtProductName.focus();
+        } 
+        // console.log(txtUsername.value);
+        if (!validarDescripcionProducto(txtProductDescription)) {
+			txtProductDescription.style.border = "red medium solid";
+			txtProductDescription.focus();
+        } 
+    
+        if (!validarPrecioProducto(txtProductPrice)) {
+			txtProductPrice.style.border = "red medium solid";
+			txtProductPrice.focus();
+        } 
+		if([txtProductName.value,txtProductDescription.value,txtProductPrice.value].includes("")){
+			console.log("Hay al menos un campo vacio...");
+		}
+		return;
+	}
+
+	pushitems(txtProductName,txtProductDescription, txtProductPrice);
+	setTimeout(function(){  
+		location.reload();
+		}, 3000);
+});
+
+window.addEventListener("load", function(){
+    if(["Items"]!=null){
+        console.log(JSON.parse(localStorage.getItem("jsonStr")));
+        let objtmp=JSON.parse(localStorage.getItem("jsonStr"));
+        obj=(objtmp!=null)?objtmp:obj;
+    }
+});
+
+function pushitems(){
+	obj["Items"].push({ product: `${txtProductName.value}`, description: `${txtProductDescription.value}`, price : `${txtProductPrice.value}`, img : `${inputFile.value}`});
+    localStorage.setItem( "jsonStr", jsonStr = JSON.stringify(obj));
+	Swal.fire({
+		position: 'center',
+		icon: 'success',
+		title: 'Producto registrado!',
+		showConfirmButton: false,
+		timer: 3000
+	  });
+}
+
+
+
+////////////////////////////////////////////////////////////
 let fileImage = document.getElementById('fileImage');
 let btnFake = document.getElementById('btnFake');
 let imageFile = document.getElementById('imageFile');
@@ -34,27 +97,5 @@ fileImage.addEventListener('change', function(){
 			reader.readAsDataURL(file);
 		  }// file
 	}
-/////////
 
-let obj = JSON.parse(jsonStr);
-console.log(obj);
-Agregar.addEventListener("click", (event) => {
-    event.preventDefault();
-    
-    if([Producto.value,Descripcion.value,Precio.value].includes("")){
-        console.log("Hay al menos un campo vacio...");
-        //Aqui van las validaciones....
-    } else{
-    obj["Items"].push({ product: `${Producto.value}`, description: `${Descripcion.value}`, price : `${Precio.value}`, img : `${inputFile.value}`});
-    localStorage.setItem( "jsonStr", jsonStr = JSON.stringify(obj));
-    }
-    location.reload();
-    }
-);
-window.addEventListener("load", function(){
-    if(["Items"]!=null){
-        console.log(JSON.parse(localStorage.getItem("jsonStr")));
-        let objtmp=JSON.parse(localStorage.getItem("jsonStr"));
-        obj=(objtmp!=null)?objtmp:obj;
-    }
-});
+//////////////////////////////////////////////////////////////////////////////////
