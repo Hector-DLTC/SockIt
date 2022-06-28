@@ -2,11 +2,30 @@
 INICIO CARRUSEL ;*/
 
 .nombre{
-    text-align: center;
-    font-size: 2rem;
-    padding-top: 50px;
-	font-weight: bold;
-	background-color:#0096FF;
+	text-align:center;
+	font-size: 35px;
+	font-family: arial;
+	background:#f2f3f4 ;
+  }
+
+  .imgR { 
+	display: block;
+	margin: 0px auto;
+	width: 95%;
+	height: 400px; 
+	margin-left: 2.5%;
+	margin-top: 2%;
+
+   }
+
+
+.about {
+    background:  #799ff1;
+    padding-bottom: 0;
+	text-align: center;
+	 
+	 
+	 
 }
 
 .slider-frame {

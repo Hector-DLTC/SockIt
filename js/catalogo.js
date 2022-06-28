@@ -10,9 +10,9 @@ function addItem(products){
         '    <div class="card-body">\n' +
         '        <h5 class="card-title">'+products.product+'</h5>\n' +
         // '        <h6 class="card-title">'+products.category+'</h6>\n' +
-        '        <p class="card-text" style="overflow: auto;max-height: 50%;">'+products.description+'</p>\n' +
+        '        <p class="card-text" style="overflow: auto; max-height: 50%;">'+products.description+'</p>\n' +
         '        <p class="card-text"style=" text-align: right;" > $'+products.price+'</p>\n' +
-        '        <div><a href="#" class="btn btn-primary" style="position: absolute;top: 86%;">Add</a></div>\n' +
+        '        <div><a href="#" class="btn btn-primary" style="position: absolute;top: 86%;">Añadir</a></div>\n' +
         '    </div>\n' +
         '</div>\n' +
         '<br/>';
