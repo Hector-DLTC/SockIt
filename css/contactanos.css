@@ -104,3 +104,14 @@ label {
     text-align: justify;
    
 }
+
+#btnEnviar{
+    color:#2fb4cc;
+    background-color: white;
+
+}
+
+#btnEnviar:hover{
+    background-color: lightgreen;
+    color: black;
+}
