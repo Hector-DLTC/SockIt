@@ -1,5 +1,12 @@
 .row {
-    margin-left: 8%;
+    margin-left: 18%;
+    margin-right: 3%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.row2 {
+    margin-left: 38%;
     margin-right: 3%;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -41,14 +48,16 @@
 }
 
 .card-img-top {
-    width: auto;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     overflow: hidden;
     border-radius: 50%;
     border: solid;
     box-shadow: -3px 3px;
     border-color: white;
     color: black;
+    margin-left: 25%;
+    margin-top: 1rem;
 }
 
 .card-title {
@@ -64,96 +73,51 @@
     color: black;
 }
 
-.carousel-item :active {
-    overflow-x: scroll;
-}
-
 .lead {
-    text-align: justify;
+    font-size: large;
+    width: 600px;
 }
 
-.container-marketing {
-    display: flex;
-}
-
-@media (max-width: 991px) {
-    .carousel-slide {
-        display: flow-root;
-    }
-    .card-img-top {
-        width: 55%;
-        height: 55%;
-        overflow: hidden;
-        border-radius: 50%;
-        border: solid;
-        box-shadow: -3px 3px;
-        border-color: white;
-        color: black;
-        align-content: center;
-        margin-left: 25%;
-    }
-    .card {
-        display: flexbox;
-    }
-    .card-title {
-        text-align: center;
-        height: 55%;
-        color: white;
-        font-size: medium;
-    }
-    .card-text {
-        font-size: medium;
-    }
-    .btn-primary {
-        width: auto;
-        font-size: medium;
-    }
-    .text-muted {
-        font-size: small;
-    }
+@media (max-width:1050px) {
     .lead {
         font-size: medium;
-    }
-    .col-sm-3 .col-md-5 .col-md-5 {
-        width: 50%;
-        height: 66%;
+        width: 300px;
     }
 }
 
-@media (max-width: 500px) {
-    .carousel-slide {
-        display: flex;
+@media (max-width:770px) {
+    .row2 {
+        margin-left: 23%;
+        margin-right: 3%;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
-    .card-img-top {
-        width: 33%;
-        height: 33%;
-        overflow: hidden;
-        border-radius: 50%;
-        border: solid;
-        box-shadow: -3px 3px;
-        border-color: white;
-        color: black;
-    }
-    .card-title {
-        text-align: center;
-        height: 33%;
-        color: white;
-        font-size: small;
-    }
-    .card-text {
-        font-size: x-small;
-        text-align: justify;
-    }
-    .text-muted {
-        font-size: small;
-    }
-    .btn-primary {
-        font-size: small;
+    .row {
+        margin-left: 18%;
+        margin-right: 3%;
+        margin-top: 5%;
+        margin-bottom: 5%;
     }
     .lead {
         font-size: small;
     }
-    .featurette-heading {
-        font-size: small;
+}
+
+@media (max-width:400px) {
+    .row2 {
+        margin-left: 8%;
+        margin-right: 3%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .row {
+        margin-left: 8%;
+        margin-right: 3%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .lead {
+        font-size: smaller;
+        width: 250px;
     }
 }

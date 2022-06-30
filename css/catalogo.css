@@ -3,7 +3,7 @@ body {
 }
 
 .buttform{
-    margin-right: 5%;
+    /* margin-right: 5%;
     border-radius: 10%;
     margin: 1%;
     margin-left: 75%;
@@ -11,7 +11,8 @@ body {
     width: 200px;
     color: white;
     background-color: red;
-    text-align: center;
+    text-align: center; */
+    display: none;
 }
 
 .textbutt{
@@ -31,6 +32,12 @@ body {
     border-radius: 5%;
    
 } */
+.contenedor-externo{
+    background-color: whitesmoke; 
+    padding: 5%; 
+    margin:7%;
+    border-radius: 10px;
+}
 
 
 .card-content {
@@ -121,6 +128,12 @@ body {
     padding: 4% 6%;
 }
 
+.contenedor-int{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
 .contenidoModalCarrito{
     background-color: #f4f4f4;
     margin: 10% 1% 5% 48%;
@@ -142,6 +155,13 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+.bi-plus-circle-fill{
+    font-size: xx-large;
+}
+.bi-plus-circle-fill:hover{
+    color: white;
+}
+
 @keyframes abrirModal {
     from{opacity: 0;}
     to{opacity: 1;}
@@ -160,6 +180,12 @@ body {
         margin: 10%;
         width: auto;
     }
+    .contenedor-int{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+    }
 }
 @media (max-width:515px){
     .buttform{
@@ -177,6 +203,13 @@ body {
     .bodyModal{
         font-size: small;
     }
+    .contenedor-int{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+    
 }
 
 @media (max-width:400px){
@@ -193,5 +226,13 @@ body {
     }
     .textbutt{
         font-size: small;
+    }
+}
+@media (max-width:270px){
+    .buttform{
+        margin-left: 45%;
+    }
+    .textbutt{
+        font-size: smaller;
     }
 }
