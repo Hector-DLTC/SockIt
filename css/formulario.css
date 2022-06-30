@@ -1,6 +1,10 @@
 body {
-    background-color: #0096FF;
+    /* background-image: url(https://cdn.discordapp.com/attachments/822319045373984779/992167901400416306/fondo-sock2.png); */
+    /* background-image: url(https://cdn.discordapp.com/attachments/982060205753917531/992126429477208125/fondo-sockit3.png); */
+    background-image: url(https://cdn.discordapp.com/attachments/822319045373984779/992160445332988054/fondo-sock.png);
+    background-size: 20%;
 }
+
 
 .container {
     background-color: #4A95FE;
@@ -95,19 +99,34 @@ label {
 }
 
 #btnFake {
-    background-color: red;
+    background-color: whitesmoke;
+    color: #0096FF;
+    padding: 0;
+    margin: 0;
+    width: 100%;
     border-radius: 10px;
     justify-content: flex-end;
-    margin-left: 40%;
-    margin-top: 15px;
-    width: 200px;
-    color: white;
     box-shadow: -5px 5px;
     border-bottom: 3px solid rgb(0, 0, 0);
     display: block;
 }
+#btnFake:hover{
+    background-color: lightgreen;
+    color: black;
+}
+#btnproducto{
+    color:#0096FF;
+    background-color: whitesmoke;
+    margin-bottom: 1rem;
+}
+
+#btnproducto:hover{
+    background-color: lightgreen;
+    color: black;
+}
 
 .center {   display: block;   margin-left: auto;   margin-right: auto;   width: 50%; }
+
 .bi-arrow-left-circle-fill{
     font-size: xx-large;
     color: black;
