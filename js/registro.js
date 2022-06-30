@@ -36,7 +36,7 @@ function validate(field, regex) {
 
 registrar.addEventListener("click",(event)=>{
     event.preventDefault();
-    regis='{"Registro":[]}';
+    regis='{"Registro":}';
     
     if (
         !validarUsername(txtUsername) ||
@@ -84,7 +84,7 @@ registrar.addEventListener("click",(event)=>{
     }
  
       
-    sendEmail(txtUsername,txtEmailreg,txtPassword);
+    // sendEmail(txtUsername,txtEmailreg,txtPassword);
     pushregis(txtUsername,txtEmailreg,txtPassword);
     setTimeout(function(){  
     location.reload();
@@ -125,15 +125,15 @@ window.addEventListener("load",function(){
 // functionConfirmPassword.addEventListener('keyup', (e) -> {})
 
 
-function sendEmail() {
-  Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "sockitteam3@gmail.com",
-    Password: "59BE6EC9FA97D2E6B92C95FDAD31261AC949",
-    To: [`${emailreg.value}`],
-    From: "sockitteam3@gmail.com",
-    Subject: "Registro Sock It!",
-    Body: `<br/> <ul><b>Usuario:</b> ${txtUsername.value} <br/> 
-    <b>Email:</b> ${txtEmailreg.value} <br/> 
-    <b>Contraseña:</b> ${txtPassword.value}<br/></ul>`,
-  }).then((message) => (message))}
+// function sendEmail() {
+//   Email.send({
+//     Host: "smtp.elasticemail.com",
+//     Username: "sockitteam3@gmail.com",
+//     Password: "59BE6EC9FA97D2E6B92C95FDAD31261AC949",
+//     To: [`${emailreg.value}`],
+//     From: "sockitteam3@gmail.com",
+//     Subject: "Registro Sock It!",
+//     Body: `<br/> <ul><b>Usuario:</b> ${txtUsername.value} <br/> 
+//     <b>Email:</b> ${txtEmailreg.value} <br/> 
+//     <b>Contraseña:</b> ${txtPassword.value}<br/></ul>`,
+//   }).then((message) => (message))}
