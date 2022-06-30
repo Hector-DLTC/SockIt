@@ -80,6 +80,10 @@ fileImage.addEventListener('change', function(){
 	previewFile('imageFile', 'fileImage', 'inputFile' )
 	//previewFile(id imagen, input type file , textArea);
 });
+console.log(imageFile.value);
+if (imageFile.value == undefined) {
+	imageFile.style.display='none';
+}
 
 	//previewFile(id imagen, input type file , textArea);
 	function previewFile(img, inputFile, input) {
@@ -95,6 +99,7 @@ fileImage.addEventListener('change', function(){
 		
 		  if (file) {
 			reader.readAsDataURL(file);
+			imageFile.style.display='block';
 		  }// file
 	}
 
