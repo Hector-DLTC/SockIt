@@ -6,7 +6,7 @@ body {
     background-color: #4A95FE;
     margin: 50px;
     padding: 8rem;
-    border-radius: 30px;
+    border-radius: 20px;
     border: solid;
     box-shadow: -25px 25px;
     margin-left: auto;
@@ -47,7 +47,7 @@ label {
     background: white;
     border-bottom: 3px solid rgb(0, 0, 0);
     transition: border-color .4s ease-out;
-    border-radius: 30px;
+    border-radius: 20px;
     height: 3rem;
     text-align: center;
 }

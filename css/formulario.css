@@ -106,3 +106,11 @@ label {
     border-bottom: 3px solid rgb(0, 0, 0);
     display: block;
 }
+.bi-arrow-left-circle-fill{
+    font-size: xx-large;
+    color: black;
+}
+.bi-arrow-left-circle-fill:hover{
+    color: white;
+
+}
