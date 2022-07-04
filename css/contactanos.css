@@ -8,10 +8,11 @@ body {
     /* display: flex; */
     /* justify-content: center;
     align-content: center; */
+    
 }
 
 .container {
-    background-color: #4A95FE;
+    background-color: #0096FF;
     margin: 20px;
     padding: 8rem;
     border-radius: 20px;
@@ -109,7 +110,7 @@ label {
 }
 
 #textBox {
-    text-align: justify;
+    text-align: center;
    
 }
 
