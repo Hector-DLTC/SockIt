@@ -83,7 +83,6 @@ label {
     text-shadow: 0 0 1px black;
 }
 
-
 .titulo {
     margin-top: -10rem;
     margin-bottom: 2rem;
@@ -95,7 +94,6 @@ label {
 
 #textBox {
     text-align: justify;
-   
 }
 
 #btnFake {
@@ -131,7 +129,7 @@ label {
     font-size: xx-large;
     color: black;
 }
-.bi-arrow-left-circle-fill:hover{
-    color: white;
 
+.bi-arrow-left-circle-fill:hover {
+    color: white;
 }

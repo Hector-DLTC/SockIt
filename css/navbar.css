@@ -55,7 +55,7 @@
  }
  
  .navbar {
-     box-shadow: -.1px 10px;
+     box-shadow: -.1px 5px;
  }
  
  @media (max-width: 991px) {

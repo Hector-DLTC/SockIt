@@ -30,3 +30,5 @@ export function validarNombreProducto(txtProductName){
             return true;
          }
     } 
+
+
