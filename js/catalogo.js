@@ -1,6 +1,5 @@
 //JSON
 let products = JSON.parse(localStorage.getItem("jsonStr"));
-console.log(products);
 //addItem
 function addItem(products){
     console.log(products);
