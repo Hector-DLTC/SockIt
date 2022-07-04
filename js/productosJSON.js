@@ -1,4 +1,4 @@
-import { validarNombreProducto, validarDescripcionProducto, validarPrecioProducto } from "./validacionesFormularioProductos.js"
+import {validarNombreProducto, validarDescripcionProducto, validarPrecioProducto } from "./validacionesFormularioProductos.js"
 
 let Agregar = document.getElementById("btnproducto");
 let txtProductName = document.getElementById("product");
@@ -86,6 +86,9 @@ if (imageFile.value == undefined) {
 
 //previewFile(id imagen, input type file , textArea);
 function previewFile(img, inputFile, input) {
+    var preview = document.getElementById(img);
+		var file    = document.getElementById(inputFile).files[0];
+		var reader  = new FileReader();
 
     reader.addEventListener("load", function() {
         document.getElementById(input).value = reader.result;

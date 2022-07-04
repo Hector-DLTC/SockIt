@@ -52,3 +52,9 @@ function cerrarModal(){
 //     btnAgregarP.click();
 // });
 
+
+// addItem({'product':'juice',
+//     'img':'https://www.gs1india.org/media/Juice_pack.jpg',
+//     'description':'Orange and Apple juice fresh and delicious',
+//     'price': '$250'
+// });
