@@ -1,0 +1,16 @@
+
+#personalizabannerimage{
+    align-content: center;
+    height: fit-content;
+    width: fit-content;
+    border-image: auto;
+    border: thin solid black;
+    margin-top: -80px; 
+    margin-bottom: 25px; 
+    border-image:black thin;
+    align-content: center; 
+     content: block;
+     max-height:100%; 
+     max-width:100%;
+
+    }

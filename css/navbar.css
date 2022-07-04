@@ -9,8 +9,12 @@
  #nosotros {
      color: white;
  }
- 
+ #personaliza{
+    color: white;
+ }
  #iniciarRegistro {
+    margin-left: 10px;
+    
      color: white;
  }
  
@@ -21,6 +25,7 @@
  #registro {
      color: white;
  }
+
  
  .nav-item {
      font-size: larger;
@@ -55,7 +60,8 @@
  }
  
  .navbar {
-     box-shadow: -.1px 10px;
+     box-shadow: -.1px 5px;
+     width: 100%;
  }
  
  @media (max-width: 991px) {

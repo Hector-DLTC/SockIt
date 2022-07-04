@@ -10,7 +10,49 @@
     font-size: 16px;
 	text-align: justify;
 } */
-
+.carousel{
+    padding-top: 2px;
+}
+@media only screen and (min-width:600px) and (max-width:600px){
+.container-01 {
+    position:relative;
+    bottom: 250px;
+    display: flex;
+   margin-top: 250px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    margin-left: 320PX;
+    margin-right: 320PX;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -200PX;
+}
+.container-02 {
+    position:relative;
+    bottom: 250px;
+ 
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    margin-left: 320PX;
+    margin-right: 320PX;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -200PX;
+}
+.container-03 {
+    position:relative;
+    bottom: 250px;
+ 
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    margin-left: 350PX;
+    margin-right: 350PX;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: -170PX;
+}
+}
 .nombre {
     text-align: center;
     font-size: 35px;

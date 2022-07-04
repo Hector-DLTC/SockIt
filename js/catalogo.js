@@ -1,11 +1,10 @@
 //JSON
 let products = JSON.parse(localStorage.getItem("jsonStr"));
-console.log(products);
 //addItem
 function addItem(products){
     console.log(products);
     const itemHTML = 
-        '<div class="card" style="width: 100%; min-width:150px; margin:0px;">\n' +
+        '<div class="card" style="width: 100%; min-width:150px; margin:0px; border:solid thin;">\n' +
         '    <img src="'+products.img +'" class="card-img-top" alt="image" style="height:200px;max-width: 100%;vertical-align: middle;">\n' +
         '    <div class="card-body">\n' +
         '        <h5 class="card-title">'+products.product+'</h5>\n' +
@@ -52,3 +51,9 @@ function cerrarModal(){
 //     btnAgregarP.click();
 // });
 
+
+// addItem({'product':'juice',
+//     'img':'https://www.gs1india.org/media/Juice_pack.jpg',
+//     'description':'Orange and Apple juice fresh and delicious',
+//     'price': '$250'
+// });
