@@ -96,7 +96,13 @@ label {
     text-align: justify;
    
 }
-.btn:hover{
+#btnRegistro{
+    color:#2fb4cc;
+    background-color: white;
+
+}
+
+#btnRegistro:hover{
     background-color: lightgreen;
     color: black;
 }

@@ -19,14 +19,34 @@ btnIncio.addEventListener('click', (event)=>{
         
     }
     if (valid==true){
-        alert("LA INFO CONCUERDA...");
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Bienvenido!',
+            showConfirmButton: false,
+            timer: 2000
+          });
+          setTimeout(function() {
+            gohome();
+            
+        }, 3000);
+       
         
     }else{
-        alert("LA INFO NO CONCUERDA...");
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'La información NO es correcta!',
+            showConfirmButton: false,
+            timer: 2000
+          });
     }
     
     
 });
 
-
+function gohome()
+{
+window.location.href="../index.html"
+}
 // console.log(data.employee.name);
