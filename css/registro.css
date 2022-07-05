@@ -1,9 +1,11 @@
 body {
     background-color: #0096FF;
+
+    max-height: fit-content;
 }
 
 .container {
-    background-color: #4A95FE;
+    background-color: #0096FF;
     margin: 50px;
     padding: 8rem;
     border-radius: 30px;
@@ -15,8 +17,8 @@ body {
 }
 
 .btn {
-    background-color: whitesmoke; 
-    color:#0096FF;
+    color:#2fb4cc;
+    background-color: white;
     border-radius: 10px;
     justify-content: flex-end;
     margin-left: 40%;
@@ -96,4 +98,8 @@ label {
 #textBox {
     text-align: justify;
    
+}
+.btn:hover{
+    background-color: lightgreen;
+    color: black;
 }

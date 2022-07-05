@@ -2,20 +2,30 @@ let emailLog = document.getElementById("emailLogin");
 let passwordLog = document.getElementById("passwordLogin");
 let registroInfo = JSON.parse(localStorage.getItem("regis"));
 let btnIncio = document.getElementById("btninicio");
+let valid=true;
 
 btnIncio.addEventListener('click', (event)=>{
     event.preventDefault();
-  
-    console.log(registroInfo);
-    console.log(registroInfo.Registro[0].email);
-    console.log(registroInfo.Registro[0].password);
-    console.log(emailLog.value);
-    console.log(passwordLog.value);
-if (emailLog.value == registroInfo.Registro[0].email && passwordLog.value == registroInfo.Registro[0].password){
-    alert("INICIASTE CORRECTAMENTE");
-}else{
-    alert("LA INFO NO CONCUERDA");
-}
+
+    for (let data of registroInfo.Registro){
+        if (emailLog.value == data.email && passwordLog.value == data.password){
+            valid=true;
+            console.log(valid);
+        }
+        else {
+            valid=false;
+            console.log(valid);
+        }
+        
+    }
+    if (valid==true){
+        alert("LA INFO CONCUERDA...");
+        
+    }else{
+        alert("LA INFO NO CONCUERDA...");
+    }
+    
+    
 });
 
 

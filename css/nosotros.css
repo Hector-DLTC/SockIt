@@ -3,6 +3,7 @@
     margin-right: 3%;
     margin-top: 5%;
     margin-bottom: 5%;
+    text-align: justify;
 }
 
 .row2 {
@@ -17,13 +18,13 @@
 }
 
 .card {
-    background-color: #4A95FE;
+    background-color: #0096FF;
     box-shadow: -10px 10px;
 }
 
 @keyframes example {
     from {
-        background-color: #4A95FE;
+        background-color: #0096FF;
     }
     to {
         background-color: #FF0300;
