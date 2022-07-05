@@ -4,6 +4,7 @@ let Agregar = document.getElementById("btnproducto");
 let txtProductName = document.getElementById("product");
 let txtProductDescription = document.getElementById("textdesc");
 let txtProductPrice = document.getElementById("precio");
+let imagentxt = document.getElementById("inputFile");
 
 let jsonStr = '{"Items":[]}';
 
@@ -13,7 +14,10 @@ let obj = JSON.parse(jsonStr);
 Agregar.addEventListener("click", (event) => {
     event.preventDefault();
     jsonStr = '{"Items":[]}';
-
+if (!imagentxt.value) {
+    alert ("se requiere agregar imagen")
+    return;
+}
     if (!validarNombreProducto(txtProductName) ||
         !validarDescripcionProducto(txtProductDescription) ||
         !validarPrecioProducto(txtProductPrice)
@@ -87,6 +91,10 @@ if (imageFile.value == undefined) {
 //previewFile(id imagen, input type file , textArea);
 function previewFile(img, inputFile, input) {
     var preview = document.getElementById(img);
+		var file    = document.getElementById(inputFile).files[0];
+		var reader  = new FileReader();
+
+        var preview = document.getElementById(img);
 		var file    = document.getElementById(inputFile).files[0];
 		var reader  = new FileReader();
 

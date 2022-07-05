@@ -24,10 +24,13 @@ body {
     margin-left: 40%;
     margin-top: 15px;
     width: 200px;
-    color: white;
     box-shadow: -5px 5px;
     border-bottom: 3px solid rgb(0, 0, 0);
     display: block;
+}
+.btn:hover{
+    background-color: lightgreen;
+    color: black;
 }
 
 label {
