@@ -13,7 +13,7 @@ export function validarNombreProducto(txtProductName){
     
     // Validar Email: 
     export function validarDescripcionProducto(txtProductDescription){
-        const descripcionProducto  = /^[a-zA-Z0-9]+[a-zA-Z0-9\s]*$/i
+        const descripcionProducto  = /^[a-zA-ZÀ-ÿ0-9]+[a-zA-Z0-9\s]*$/i
          if (!descripcionProducto.test(txtProductDescription.value)){
             return false;
          }else {

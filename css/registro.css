@@ -65,12 +65,12 @@ label {
 }
 
 .form-control+small {
-    color: red;
+    color: rgb(190, 0, 0);
     opacity: 0%;
     height: 0;
     transition: opacity .5s ease-out;
     font-weight: bold;
-    font-size: medium;
+    font-size:large;
     text-shadow: 0 0 1px black;
     margin-bottom: 45px;
     text-align: center;
