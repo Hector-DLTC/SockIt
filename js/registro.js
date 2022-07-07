@@ -15,7 +15,7 @@ const inputs = document.querySelectorAll('input');
 const patterns = {
   username: /^[^0-9][a-zA-Z\u00f1\u00d10-9]{2,15}$/i,
   emailreg: /^([^0-9][a-zA-Z\d\.-_-\u00f1\u00d1]+)@([a-z\d-][^0-9]+)\.([a-zA-Z]{2,8})(\.[a-zA-Z]{2,8})?$/,
-  password: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\u00f1\u00d1]{8,}$/,
+  password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/,
   passwordConfirm: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\u00f1\u00d1]{8,}$/
 };
 
@@ -67,6 +67,12 @@ registrar.addEventListener("click",(event)=>{
         
         if([txtUsername.value,txtEmailreg.value,txtPassword.value].includes("")){
             console.log("Hay al menos un campo vacio...");
+            txtUsername.style.border = "red medium solid";
+              txtUsername.focus();
+            txtEmailreg.style.border = "red medium solid";
+              txtEmailreg.focus();
+            txtPassword.style.border = "red medium solid";
+              txtPassword.focus();
         }
         // if(txtPassword.value===txtPasswordConfirm.value){
         //     console.log("Las contraseñas no son iguales..."); 
@@ -84,7 +90,7 @@ registrar.addEventListener("click",(event)=>{
     }
  
       
-    // sendEmail(txtUsername,txtEmailreg,txtPassword);
+    sendEmail(txtUsername,txtEmailreg,txtPassword);
     pushregis(txtUsername,txtEmailreg,txtPassword);
     setTimeout(function(){  
     location.reload();
@@ -125,15 +131,15 @@ window.addEventListener("load",function(){
 // functionConfirmPassword.addEventListener('keyup', (e) -> {})
 
 
-// function sendEmail() {
-//   Email.send({
-//     Host: "smtp.elasticemail.com",
-//     Username: "sockitteam3@gmail.com",
-//     Password: "59BE6EC9FA97D2E6B92C95FDAD31261AC949",
-//     To: [`${emailreg.value}`],
-//     From: "sockitteam3@gmail.com",
-//     Subject: "Registro Sock It!",
-//     Body: `<br/> <ul><b>Usuario:</b> ${txtUsername.value} <br/> 
-//     <b>Email:</b> ${txtEmailreg.value} <br/> 
-//     <b>Contraseña:</b> ${txtPassword.value}<br/></ul>`,
-//   }).then((message) => (message))}
+function sendEmail() {
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "sockitteam3@gmail.com",
+    Password: "59BE6EC9FA97D2E6B92C95FDAD31261AC949",
+    To: [`${emailreg.value}`],
+    From: "sockitteam3@gmail.com",
+    Subject: "Registro Sock It!",
+    Body: `<br/> <ul><b>Usuario:</b> ${txtUsername.value} <br/> 
+    <b>Email:</b> ${txtEmailreg.value} <br/> 
+    <b>Contraseña:</b> ${txtPassword.value}<br/></ul>`,
+  }).then((message) => (message))}

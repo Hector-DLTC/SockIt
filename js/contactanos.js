@@ -3,7 +3,7 @@ let enviar = document.getElementById("btnEnviar")
 let txtNombre = document.getElementById("Name");
 let txtEmail = document.getElementById("email");
 let txtTel = document.getElementById("phone");
-
+let txtBox = document.getElementById("textBox");
 const inputs = document.querySelectorAll('input');
 
 const patterns = {
@@ -29,6 +29,12 @@ function validate(field, regex) {
 
 enviar.addEventListener("click", (event) => {
   event.preventDefault();
+  if ([txtBox.value].includes("")){
+    console.log("Hay al menos un campo vacio...")
+    txtBox.style.border = "red medium solid";
+    txtBox.focus();
+    return;
+  }
   if (
     !validarNombre(txtNombre) ||
     !validarTel(txtTel) ||
@@ -49,19 +55,24 @@ enviar.addEventListener("click", (event) => {
       txtTel.style.border = "red medium solid";
       txtTel.focus();
     } 
+   
 
     return;
 
   } 
-  sendEmail(txtNombre, txtEmail, txtTel, textBox);
+  sendEmail(txtNombre, txtEmail, txtTel, txtBox);
   
-  const inputs = document.querySelectorAll('input, #textBox');
-  inputs.forEach(input => {
-    input.value = '';
-    txtNombre.style.border = "";
-    txtEmail.style.border = "";
-    txtTel.style.border = "";
-  });
+  // const inputs = document.querySelectorAll('input, #textBox');
+  // inputs.forEach(input => {
+  //   input.value = '';
+  //   txtNombre.style.border = "";
+  //   txtEmail.style.border = "";
+  //   txtTel.style.border = "";
+  //   txtBox.style.border = "";
+    setTimeout(function(){  
+      location.reload();
+      }, 3000);
+  // });
 }); 
 
 
@@ -77,13 +88,13 @@ function sendEmail() {
     Body: `<ul>Nombre: ${txtNombre.value} <br/> 
     Email: ${txtEmail.value} <br/> 
     Teléfono: ${txtTel.value}<br/> 
-    Mensaje: ${textBox.value}</ul>`,
+    Mensaje: ${txtBox.value}</ul>`,
   }).then((message) => Swal.fire({
           position: 'center',
           icon: 'success',
           title: 'Correo enviado!',
           showConfirmButton: false,
-          timer: 2000
+          timer: 3000
         }));
 }
 

@@ -23,7 +23,7 @@ export function validarEmailreg(txtEmailreg){
 
 //Validar contraseña:
 export function validarPassword(txtPassword){
-    const PassUsuario  = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    const PassUsuario  = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/;
      if (!PassUsuario.test(txtPassword.value)){
         return false;
      }else {
