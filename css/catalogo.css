@@ -139,10 +139,10 @@ body {
 .contenedor-int{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
+    grid-gap: 15px;
     grid-auto-rows: minmax(100px, auto);
     justify-items: center;
-    align-items: center;
+    align-items: space-between;
 }
 .contenidoModalCarrito{
     background-color: #f4f4f4;
