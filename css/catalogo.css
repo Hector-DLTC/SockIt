@@ -175,6 +175,9 @@ body {
 .bi-plus-circle-fill:hover{
     color: white;
 }
+#user {
+    display: block;
+}
 
 @keyframes abrirModal {
     from{opacity: 0;}

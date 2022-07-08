@@ -4,6 +4,7 @@ let registroInfo = JSON.parse(localStorage.getItem("regis"));
 let btnIncio = document.getElementById("btninicio");
 let valid=true;
 
+
 btnIncio.addEventListener('click', (event)=>{
     event.preventDefault();
 
@@ -26,11 +27,13 @@ btnIncio.addEventListener('click', (event)=>{
             showConfirmButton: false,
             timer: 2000
           });
+          let iconUsuarioLogin = document.getElementById("bi-person-circle");
+            iconUsuarioLogin.style.color="green";
           setTimeout(function() {
             gohome();
             
         }, 3000);
-       
+        window.localStorage.setItem("loginActive", JSON.stringify(true))
         
     }else{
         Swal.fire({
@@ -50,3 +53,9 @@ function gohome()
 window.location.href="../index.html"
 }
 // console.log(data.employee.name);
+window.addEventListener("load",function(){
+    if(Boolean(this.window.localStorage.getItem("loginActive"))){
+        let iconUsuarioLogin = document.getElementById("bi-person-circle");
+            iconUsuarioLogin.style.color="green";
+    }
+});
