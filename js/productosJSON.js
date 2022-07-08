@@ -5,7 +5,7 @@ let txtProductName = document.getElementById("product");
 let txtProductDescription = document.getElementById("textdesc");
 let txtProductPrice = document.getElementById("precio");
 let imagentxt = document.getElementById("inputFile");
-
+let btnImagen = document.getElementById("btnFake");
 let jsonStr = '{"Items":[]}';
 
 
@@ -14,10 +14,7 @@ let obj = JSON.parse(jsonStr);
 Agregar.addEventListener("click", (event) => {
     event.preventDefault();
     jsonStr = '{"Items":[]}';
-if (!imagentxt.value) {
-    alert ("se requiere agregar imagen")
-    return;
-}
+
     if (!validarNombreProducto(txtProductName) ||
         !validarDescripcionProducto(txtProductDescription) ||
         !validarPrecioProducto(txtProductPrice)
@@ -25,17 +22,22 @@ if (!imagentxt.value) {
         if (!validarDescripcionProducto(txtProductName)) {
             txtProductName.style.border = "red medium solid";
             //   txtUsername.value = "";
-            txtProductName.focus();
+            txtProductName.blur();
         }
         // console.log(txtUsername.value);
         if (!validarDescripcionProducto(txtProductDescription)) {
             txtProductDescription.style.border = "red medium solid";
-            txtProductDescription.focus();
+            txtProductDescription.blur();
         }
 
         if (!validarPrecioProducto(txtProductPrice)) {
             txtProductPrice.style.border = "red medium solid";
-            txtProductPrice.focus();
+            txtProductPrice.blur();
+        }
+        if (!imagentxt.value) {
+            btnImagen.style.border = "red medium solid";
+            Agregar.blur();
+            // return;
         }
         if ([txtProductName.value, txtProductDescription.value, txtProductPrice.value].includes("")) {
             console.log("Hay al menos un campo vacio...");
