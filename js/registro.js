@@ -24,6 +24,7 @@ inputs.forEach((input) => {
     validate(event.target, patterns[event.target.attributes.id.value]);
   });
 });
+
 function validate(field, regex) {
   if (regex.test(field.value)) {
     
@@ -39,11 +40,13 @@ registrar.addEventListener("click",(event)=>{
     regis='{"Registro":}';
     
     if (
+        
         !validarUsername(txtUsername) ||
         !validarPassword(txtPassword) ||
         // !validarPasswordConfirm(txtPasswordConfirm) ||
         !validarEmailreg(txtEmailreg)
       ) {
+        
         if (!validarUsername(txtUsername)) {
           txtUsername.style.border = "red medium solid";
         //   txtUsername.value = "";
@@ -59,6 +62,7 @@ registrar.addEventListener("click",(event)=>{
           txtPassword.style.border = "red medium solid";
           txtPassword.focus();
         } 
+     
         // console.log(txtPassword.value);
         // if (!validarPasswordConfirm(txtPasswordConfirm)) {
         //     txtPasswordConfirm.style.border = "red medium solid";
@@ -88,13 +92,17 @@ registrar.addEventListener("click",(event)=>{
         
         
     }
- 
-      
-    sendEmail(txtUsername,txtEmailreg,txtPassword);
+      if (txtPassword.value == txtPasswordConfirm.value) {
+        passwordConfirmMessage.style.display="none"
+        sendEmail(txtUsername,txtEmailreg,txtPassword);
     pushregis(txtUsername,txtEmailreg,txtPassword);
     setTimeout(function(){  
     location.reload();
     }, 3000);
+      } else{
+        passwordConfirmMessage.style.display="block"
+      }
+    
     
 });
 function pushregis() {
