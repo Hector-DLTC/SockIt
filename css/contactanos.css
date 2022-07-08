@@ -8,7 +8,6 @@ body {
     /* display: flex; */
     /* justify-content: center;
     align-content: center; */
-    
 }
 
 .container {
@@ -111,16 +110,49 @@ label {
 
 #textBox {
     text-align: center;
-   
 }
 
-#btnEnviar{
-    color:#2fb4cc;
+#btnEnviar {
+    color: #2fb4cc;
     background-color: white;
-
 }
 
-#btnEnviar:hover{
+#btnEnviar:hover {
     background-color: lightgreen;
     color: black;
+}
+
+@media (max-width: 991px) {
+    .titulo {
+        font-size: medium;
+    }
+    .n1 {
+        font-size: medium;
+    }
+    .form-control {
+        font-size: medium;
+    }
+    .btn {
+        font-size: medium;
+        width: fit-content;
+    }
+    .container {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 500px) {
+    .titulo {
+        font-size: x-small;
+    }
+    .n1 {
+        font-size: x-small;
+    }
+    .form-control {
+        font-size: x-small;
+    }
+    .btn {
+        font-size: x-small;
+        width: fit-content;
+    }
 }

@@ -41,7 +41,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle " id="iniciarRegistro" href="./formulario.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-person-circle fa-4x"></i>
-            </a>
+                    </a>
                     <div class="dropdown-menu" style="background-color: #0096FF" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" id="iniciar" href="./Login.html">Iniciar sesión</a>
                         <a class="dropdown-item" id="registro" href="./registro.html">Crear cuenta</a>
@@ -65,22 +65,22 @@
             <div class="col-12 col-md-8 mx-md-auto mt-5">
                 <form class="px-2 px-sm-5 py-5">
 
-                    <h1 class="titulo">Agregar producto</h1>
+                    <h1 class="titulo">AGREGAR PRODUCTO</h1>
 
                     <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
                     <div class="form-group">
-                        <label for="ProductName">Nombre de tu producto: </label>
+                        <label class="n2" for="ProductName">Nombre de tu producto: </label>
                         <input type="text" class="form-control" id="product" placeholder="Nombre de tu producto " maxlength="15" required>
                         <small id="productoHelp" class="form-text">No utilices caracteres especiales</small>
                     </div>
 
                     <div class="form-group">
-                        <label for="ProductDescription">Describe tu producto </label>
+                        <label class="n2" for="ProductDescription">Describe tu producto </label>
                         <textarea maxlength="140" name="textBox" cols="45" rows="10" class="form-control" id="textdesc" placeholder="Límite de 60 caracteres " maxlength="60" required></textarea>
                         <small id="textdescBoxHelp" class="form-text">Máximo 60 Caracteres</small>
 
-                        <label>Precio</label>
+                        <label class="n2">Precio</label>
                         <input type="text" class="form-control" id="precio" placeholder="Precio de tu producto $(MXN)" maxlength="4" minlength="1" required>
                         <small id="precioHelp" class="form-text">Sólo números.</small>
                     </div>
@@ -91,7 +91,7 @@
 
                         <form>
                             <div class="form-group">
-                                <label  style="text-align:center;">Selecciona una imagen:</label>
+                                <label class="n2" style="text-align:center;">Selecciona una imagen:</label>
                                 <input type="button" class="form-control" value="Subir imagen" id="btnFake" style=" background-color: whitesmoke; color: #0096FF; padding: 0; margin: 0; width: 100%;">
 
                                 <input type="file" class="form-control-file" id="fileImage" style="display:none">
@@ -113,7 +113,7 @@
 
                     <!-------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-                    <button type="submit" id="btnproducto" class="btn d-block mx-auto" >Agregar</button>
+                    <button type="submit" id="btnproducto" class="btn d-block mx-auto">Agregar</button>
 
                 </form>
             </div>

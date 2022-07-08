@@ -1,16 +1,58 @@
-
-#personalizabannerimage{
+#personalizabannerimage {
     align-content: center;
     height: fit-content;
     width: fit-content;
     border-image: auto;
     border: thin solid black;
-    margin-top: -80px; 
-    margin-bottom: 25px; 
-    border-image:black thin;
-    align-content: center; 
-     content: block;
-     max-height:100%; 
-     max-width:100%;
+    margin-top: -80px;
+    margin-bottom: 25px;
+    border-image: black thin;
+    align-content: center;
+    content: block;
+    max-height: 100%;
+    max-width: 100%;
+}
 
+@media (max-width: 991px) {
+    .container {
+        font-size: medium;
     }
+    .titulo {
+        font-size: medium;
+    }
+    .n5 {
+        font-size: medium;
+    }
+    .form-control {
+        font-size: medium;
+    }
+    .btn {
+        font-size: medium;
+        width: fit-content;
+    }
+    .container {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 500px) {
+    .container .btn .form {
+        font-size: small;
+    }
+    .titulo {
+        font-size: small;
+    }
+    .n5 {
+        font-size: x-small;
+    }
+    .form-control {
+        font-size: x-small;
+    }
+    .btn {
+        font-size: x-small;
+        width: fit-content;
+    }
+    .n6 {
+        width: 300px;
+    }
+}
