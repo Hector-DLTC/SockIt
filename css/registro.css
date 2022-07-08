@@ -1,6 +1,5 @@
 body {
     background-color: #0096FF;
-
     max-height: fit-content;
 }
 
@@ -17,7 +16,7 @@ body {
 }
 
 .btn {
-    color:#2fb4cc;
+    color: #2fb4cc;
     background-color: white;
     border-radius: 10px;
     justify-content: flex-end;
@@ -28,7 +27,8 @@ body {
     border-bottom: 3px solid rgb(0, 0, 0);
     display: block;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: lightgreen;
     color: black;
 }
@@ -70,7 +70,7 @@ label {
     height: 0;
     transition: opacity .5s ease-out;
     font-weight: bold;
-    font-size:large;
+    font-size: large;
     text-shadow: 0 0 1px black;
     margin-bottom: 45px;
     text-align: center;
@@ -85,7 +85,6 @@ label {
     text-shadow: 0 0 1px black;
 }
 
-
 .titulo {
     margin-top: -10rem;
     margin-bottom: 2rem;
@@ -97,20 +96,19 @@ label {
 
 #textBox {
     text-align: justify;
-   
 }
-#btnRegistro{
-    color:#2fb4cc;
+
+#btnRegistro {
+    color: #2fb4cc;
     background-color: white;
-
 }
 
-#btnRegistro:hover{
+#btnRegistro:hover {
     background-color: lightgreen;
     color: black;
 }
 
-.icon{
+.icon {
     position: absolute;
     height: 25px;
     left: 87%;
@@ -120,6 +118,6 @@ label {
     cursor: pointer;
 }
 
-.icon:hover{
+.icon:hover {
     opacity: 0.8;
 }

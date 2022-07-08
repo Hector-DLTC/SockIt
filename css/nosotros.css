@@ -6,6 +6,11 @@
     text-align: justify;
 }
 
+.carousel {
+    background-color: #FFFFFF;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #f34747 100%);
+}
+
 .row2 {
     margin-left: 38%;
     margin-right: 3%;
@@ -18,8 +23,9 @@
 }
 
 .card {
-    background-color: #0096FF;
     box-shadow: -10px 10px;
+    background-color: #0096FF;
+    box-shadow: -10px 10px white;
 }
 
 @keyframes example {
@@ -27,12 +33,12 @@
         background-color: #0096FF;
     }
     to {
-        background-color: #FF0300;
+        background-color: #f34747;
     }
 }
 
 .card:hover {
-    background-color: #FF0300;
+    background-color: #f34747;
     transition-delay: 500ms;
     animation-name: example;
     animation-duration: .5s;
@@ -56,7 +62,7 @@
     border: solid;
     box-shadow: -3px 3px;
     border-color: white;
-    color: black;
+    color: white;
     margin-left: 25%;
     margin-top: 1rem;
 }
@@ -68,10 +74,14 @@
     text-align: center;
 }
 
+.featurette-heading {
+    text-align: left;
+}
+
 .btn-primary {
-    margin-left: 30%;
+    margin-bottom: auto;
     box-shadow: -5px 5px;
-    color: black;
+    color: white;
 }
 
 .lead {
@@ -86,7 +96,7 @@
     }
 }
 
-@media (max-width:770px) {
+@media (max-width:991px) {
     .row2 {
         margin-left: 23%;
         margin-right: 3%;
@@ -102,9 +112,16 @@
     .lead {
         font-size: small;
     }
+    .featurette-heading {
+        font-size: x-large;
+        text-align: left;
+    }
+    .text-muted {
+        font-size: large;
+    }
 }
 
-@media (max-width:400px) {
+@media (max-width:500px) {
     .row2 {
         margin-left: 8%;
         margin-right: 3%;
@@ -120,5 +137,11 @@
     .lead {
         font-size: smaller;
         width: 250px;
+    }
+    .featurette-heading {
+        font-size: medium;
+    }
+    .text-muted {
+        font-size: x-small;
     }
 }
