@@ -23,22 +23,41 @@ export function validarEmailreg(txtEmailreg){
 
 //Validar contraseña:
 export function validarPassword(txtPassword){
-    const PassUsuario  = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$/;
+    const PassUsuario  = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/;
      if (!PassUsuario.test(txtPassword.value)){
         return false;
      }else {
         return true;
      }
 } 
+
+export function machpassword(pass1,pass2) {
+   if (pass1.value.toString() === pass2.value.toString()) {
+      return true
+   }else {
+   return false
+   }}
 //Validar repetir contraseña:
 export function validarPasswordConfirm(txtPasswordConfirm){
-   const PassUsuario2  = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
-    if (!PassUsuario2.test(txtPasswordConfirm.value)){
+   const PassUsuario2  = /^(?=.*\d)(?=.*[\u0021-\u002b\u003c-\u0040])(?=.*[A-Z])(?=.*[a-z])\S{8,16}$/;
+    if (PassUsuario2.test(txtPasswordConfirm.value)){
        return false;
     }else {
        return true;
-    }
+    } 
 } 
+
+let eye = document.getElementById('eye');
+let input = document.getElementById('password');
+eye.addEventListener("click", function(){
+    if (input.type === "password") {
+        input.type = "text";
+        eye.style.opacity = 0.8;
+    } else {
+        input.type = "password";
+        eye.style.opacity = 0.2;
+    }
+})
 
 
 

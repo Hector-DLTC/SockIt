@@ -109,3 +109,17 @@ label {
     background-color: lightgreen;
     color: black;
 }
+
+.icon{
+    position: absolute;
+    height: 25px;
+    left: 87%;
+    top: 60px;
+    opacity: 0.3;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.icon:hover{
+    opacity: 0.8;
+}

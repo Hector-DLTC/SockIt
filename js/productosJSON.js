@@ -71,9 +71,8 @@ function pushitems() {
     });
 }
 
-
-
 ////////////////////////////////////////////////////////////
+
 let fileImage = document.getElementById('fileImage');
 let btnFake = document.getElementById('btnFake');
 let imageFile = document.getElementById('imageFile');

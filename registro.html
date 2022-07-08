@@ -75,20 +75,25 @@
                             <input type="text" class="form-control" id="emailreg" placeholder="Email: " required>
                             <small id="emailHelp" class="form-text">Email inválido.</small>
                         </div>
+                        
     
-                        <div class="form-group">
+                        <div class="form-group" style="position: relative; ">
+                            
                             <label for="password">Contraseña: </label>
-                            <input type="password" class="form-control" id="password" placeholder="Contraseña: " maxlength="15" required>
-                            <small id="passwordHelp" class="form-text"><ul>Entre 8-10 caracteres.</ul><ul>1 Letra mayúscula.</ul><ul>1 Letra minúscula.</ul><ul>1 Cáracter especial (@!?$).</ul></small>
+                            <img src="/img/Show.png" alt="" class="icon" id="eye">
+                            <input type="password" class="form-control" id="password" placeholder="Contraseña: " maxlength="16" required>
+                            <small class="form-text" style="font-size:small;"><ul>Entre 8-16 caracteres.</ul><ul>1 Letra mayúscula y minúscula.</ul><ul>1 Cáracter especial (@!?$).</ul></small>   
                             
                         </div>
-                    <!-- <div class="form-group">
-                        <label for="password">Confirma la Contraseña: </label>
-                        <input type="password" class="form-control" id="passwordConfirm" placeholder="Contraseña" maxlength="24" minlength="8" required>
-                        <small id="passwordHelp" class="form-text">Debe contener 8 caracteres y al menos 1 número</small>
-                        <span id="message"></span>
-                    </div> -->
+                        
+                        
 
+                     
+                        <label for="password">Confirma la Contraseña: </label>
+                        <input type="password" class="form-control" id="passwordConfirm" placeholder="Contraseña" maxlength="16" required>
+                        
+                    
+                    <small id="passwordHelp" class="form-text" style="color: red; display: none;  ">las contraseñas no coinciden</small>
 
                     <button type="submit" id="btnRegistro" class="btn d-block mx-auto">Enviar</button>
 
