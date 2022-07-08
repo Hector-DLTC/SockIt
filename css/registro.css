@@ -120,6 +120,44 @@ label {
     cursor: pointer;
 }
 
+@media (max-width:991px) {
+    .icon{
+        position: absolute;
+        height: 25px;
+        left: 82%;
+        top: 60px;
+        opacity: 0.3;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+}
+
 .icon:hover{
+    opacity: 0.8;
+}
+
+.icon2{
+    position: absolute;
+    height: 25px;
+    left: 87%;
+    top: 60px;
+    opacity: 0.3;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+@media (max-width:991px) {
+    .icon2{
+        position: absolute;
+        height: 25px;
+        left: 82%;
+        top: 60px;
+        opacity: 0.3;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+}
+
+.icon2:hover{
     opacity: 0.8;
 }
