@@ -26,4 +26,4 @@ Para este proyecto el cliente quería un carrito accesible e ideamos un modal qu
 <img src="https://cdn.discordapp.com/attachments/982060205753917531/994455314294390824/Captura2.PNG">
 
 ## Visita nuestra base de Datos
-https://github.com/AndresMinakata/com.sockit.project/tree/develop
+https://github.com/AndresMinakata/com.sockit.project/tree/main
