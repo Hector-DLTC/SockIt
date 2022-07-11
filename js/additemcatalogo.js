@@ -1,75 +1,39 @@
-function addItem(products){
-    console.log(products);
-    const itemHTML = 
-        '<div class="card" style="width: 100%; min-width:150px; margin:0px; border:solid thin;">\n' +
-        '    <img src="'+products.img +'" class="card-img-top" alt="image" style="height:200px;max-width: 100%;vertical-align: middle;">\n' +
-        '    <div class="card-body">\n' +
-        '        <h5 class="card-title">'+products.product+'</h5>\n' +
-        // '        <h6 class="card-title">'+products.category+'</h6>\n' +
-        '        <p class="card-text" style="overflow: auto; max-height: 50%;">'+products.description+'</p>\n' +
-        '        <p class="card-text"style=" text-align: right;" > $'+products.price+'</p>\n' +
-        '        <div><a href="#" class="btn btn-primary" style="position: absolute;top: 86%;">Añadir</a></div>\n' +
-        '    </div>\n' +
-        '</div>\n' ;
-    const itemsContainer = document.getElementById("list-items");
-    itemsContainer.innerHTML += itemHTML;
-}
-addItem({'product':'Calcetas QATAR WHITE',
-    'img':'./img/img-catalogo/qatar01.png',
-    'description':'Calcetas oficiales de la selección mexicana QATAR 2022.',
-    'price':'350'
+let productos;
+const URL_MAIN ='http://localhost:8080/api/products/';
+function addItems(list_items){
+    fetch(URL_MAIN,{
+        method:'get'
+    }).then(function(response){
+        response.json().then(function(json){
+            // console.log(json);
+            // console.log(json.length);
+            productos=json;
+            Array.from(json).forEach((p,index)=>{
+                list_items.innerHTML+=`
+                <div class="card" style="width: 100%; min-width:150px; margin:0px; border:solid thin;">
+                    <img src="${p.url_imagen}" class="card-img-top" alt="image" style="height:200px;max-width: 100%;vertical-align: middle;">
+                    <div class="card-body">
+                        <h5 class="card-title">${p.nombre}</h5>
+                
+                        <small class="card-text" style="overflow: auto; max-height: 50%;">'${p.descripcion}'</small>
+                        <p class="card-text"style=" text-align: right;" > $${p.precio} MXN</p>
+                        <div><button id="btn${p.id}"class ="btn btn-primary"style="position: absolute; top:86%;">Añadir</button></div>
+                    </div>
+                </div> `;
+            });//foreach
+        });//then
+    }).catch(function(err){
+        console.log(err);
+    });
+    // console.log(document.getElementById("list-items"));
+}// addItems
+window.addEventListener("load",function(){
+    let div =document.getElementById("list-items");
+    addItems(div);
 });
-
-addItem({'product':'Calcetas QATAR PINK',
-    'img':'./img/img-catalogo/qatar02.png',
-    'description':'Calcetas oficiales de la selección mexicana QATAR 2022.',
-    'price':'250'
-});
-
-addItem({'product':'Calcetas QATAR RED',
-    'img':'./img/img-catalogo/qatar03.png',
-    'description':'Calcetas oficiales de la selección mexicana QATAR 2022.',
-    'price':'250'
-});
-
-addItem({'product':'Mut-toe',
-    'img':'./img/img-catalogo/mute-toe cover-cubrededos.jpg',
-    'description':'Calcetines  cubre dedos.',
-    'price':'125'
-});
-
-addItem({'product':'Ped-Tobilleros',
-    'img':'./img/img-catalogo/ped-tobilleros-low cut.jpg',
-    'description':'Calcetines tobilleros Low Cut.',
-    'price':'150'
-});
-
-addItem({'product':'Calcetín a la rodilla ',
-    'img':'./img/img-catalogo/knee high-altos.jpg',
-    'description':'Calcetín a la rodilla altos',
-    'price':'190'
-});
-
-addItem({'product':'Calcetines de animales  |PERROS|',
-    'img':'./img/img-catalogo/animales01.png',
-    'description':'Calcetines con forma de perritos.',
-    'price':'250'
-});
-
-addItem({'product':'Calcetines de animales |VARIOS| |NUEVOS|',
-    'img':'./img/img-catalogo/animales02.png',
-    'description':'Calcetines con forma de animales.',
-    'price':'250'
-});
-
-addItem({'product':'Calcetines de animales |GATOS|',
-    'img':'./img/img-catalogo/animales03.png',
-    'description':'Calcetines con forma de gatitos.',
-    'price':'250'
-});
-
-addItem({'product':'Calcetines de animales |VARIOS|',
-    'img':'./img/img-catalogo/animales04.png',
-    'description':'Calcetines con forma de animales.',
-    'price':'250'
-});
+function view(index){
+    document.getElementById("productTitleModal").innerHTML=productos[index].nombre;
+    document.getElementById("productoBodyModal").innerHTML=`${productos[index].descripcion}<img class="bd-placeholder-img card-img-top" role"img" src="img/${productos[index].url_imagen}"/>
+    <strong>${productos[index].precio}MXN</strong>`;
+    $("#productModal").modal("show");
+}//view
