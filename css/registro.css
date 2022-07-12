@@ -154,6 +154,25 @@ label {
         transform: translateY(-50%);
         cursor: pointer;
     }
+    .container{
+        padding:0rem;
+        padding-top: 8rem;
+    }
+    .btn{
+        margin-top: 30px;
+    }
+}
+
+@media(max-width:301px){
+    .icon2{
+        position: absolute;
+        height: 25px;
+        left: 87%;
+        top: 90px;
+        opacity: 0.3;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
 }
 
 .icon2:hover{

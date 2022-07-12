@@ -122,7 +122,9 @@ label {
         width: fit-content;
     }
     .container {
-        width: fit-content;
+        /* width: fit-content; */
+        padding:0rem;
+        padding-top: 8rem;
     }
 }
 
