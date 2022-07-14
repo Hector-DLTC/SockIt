@@ -12,7 +12,7 @@ btnFake.addEventListener('click', function() {
 });
 fileImage.addEventListener('change', function() {
     previewFile('imageFile', 'fileImage', 'inputFile')
-        //previewFile(id imagen, input type file , textArea);
+        
         
 });
 console.log(imageFile.value);
@@ -20,7 +20,6 @@ if (imageFile.value == undefined) {
     imageFile.style.display = 'none';
 }
 
-//previewFile(id imagen, input type file , textArea);
 function previewFile(img, inputFile, input) {
     var preview = document.getElementById(img);
 		var file    = document.getElementById(inputFile).files[0];
@@ -48,7 +47,7 @@ btnFaker.addEventListener("click", (event) => {
     
     return;
     }
-    // pushitems(inputFile);
+   
     const data =  {url_imagen_personalizar: `${inputFile.value}`
     };
         fetch(URL_MAIN, {
@@ -62,9 +61,9 @@ btnFaker.addEventListener("click", (event) => {
           })
           .then(response => response.json())
           .then(data => {
-            // console.log(descripcion);
-            // console.log(nombre);
+          
             if (localStorage.getItem("accessToken") !== undefined){
+
             console.log('Success:', data);
             Swal.fire({
                         position: 'center',
@@ -73,7 +72,7 @@ btnFaker.addEventListener("click", (event) => {
                         showConfirmButton: false,
                         timer: 3000
                     });
-}})
+            }})
           .catch((error) => {
             console.error('Error:', error);
             Swal.fire({
@@ -88,25 +87,5 @@ btnFaker.addEventListener("click", (event) => {
         location.reload();
     }, 3000);
 });
-
-// window.addEventListener("load", function() {
-//     if (["PerIma"] != null) {
-//         console.log(JSON.parse(localStorage.getItem("personalizaImage")));
-//         let objtmp = JSON.parse(localStorage.getItem("personalizaImage"));
-//         obj = (objtmp != null) ? objtmp : obj;
-//     }
-// });
-
-// function pushitems() {
-//     obj["PerIma"].push({img: `${inputFile.value}` });
-//     localStorage.setItem("personalizaImage", personalizaImage = JSON.stringify(obj));
-//     Swal.fire({
-//         position: 'center',
-//         icon: 'success',
-//         title: 'Foto guardada!',
-//         showConfirmButton: false,
-//         timer: 3000
-//     });
-// }
 
 

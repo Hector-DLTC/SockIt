@@ -58,7 +58,7 @@ function cerrarModal(){
 //Crear las cards de productos en catalogo con los datos de la DB
 const createCard=data=>{
     data.forEach(product=>{
-        // console.log(products);
+        
         templateCard.querySelector('img').setAttribute('src', product.url_imagen);
         templateCard.querySelector('h5').textContent= product.nombre;
         templateCard.querySelector('small').textContent=product.descripcion;
@@ -72,9 +72,9 @@ const createCard=data=>{
 //Añadir productos al carrito
 
 const añadirCarrito =e=>{
-    // console.log(e.target.classList.contains("btn-primary"));
+    
     if(e.target.classList.contains("btn-primary")){
-        // console.log(e.target.parentElement);
+        
         setCarrito(e.target.parentElement)
         abrirModal();
     }

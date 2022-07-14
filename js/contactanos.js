@@ -62,17 +62,9 @@ enviar.addEventListener("click", (event) => {
   } 
   sendEmail(txtNombre, txtEmail, txtTel, txtBox);
   
-  // const inputs = document.querySelectorAll('input, #textBox');
-  // inputs.forEach(input => {
-  //   input.value = '';
-  //   txtNombre.style.border = "";
-  //   txtEmail.style.border = "";
-  //   txtTel.style.border = "";
-  //   txtBox.style.border = "";
     setTimeout(function(){  
       location.reload();
       }, 3000);
-  // });
 }); 
 
 
