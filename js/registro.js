@@ -5,6 +5,7 @@ let txtEmailreg = document.getElementById("emailreg");
 let txtPassword= document.getElementById("password");
 let txtPasswordConfirm = document.getElementById("passwordConfirm");
 let passwordConfirmMessage = document.getElementById("passwordHelp");
+const URL_MAIN ='http://localhost:8080/api/users/register/';
 // let confirm=false;
 
 let regis='{"Registro":[]}';
@@ -117,6 +118,23 @@ function pushregis() {
   });
   
 }
+
+// fetch(URL_MAIN, {
+//   method: 'POST', // or 'PUT'
+//   headers: {
+//     'Content-Type': 'application/json',
+//   },
+//   body: JSON.stringify(data),
+// })
+// .then(response => response.json())
+// .then(data => {
+//   console.log('Success:', data);
+// })
+// .catch((error) => {
+//   console.error('Error:', error);
+// });
+
+
 window.addEventListener("load",function(){
     if(["Registro"]!=null){
         console.log(JSON.parse(localStorage.getItem("regis")));
