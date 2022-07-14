@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 })
 items.addEventListener("click",e=>{
     añadirCarrito(e);
-    abrirModal();
+    
 })
 //Modal Carrito - addEventListener
 modalBtn.addEventListener("click", abrirModal);
@@ -55,6 +55,7 @@ function abrirModal(){
 function cerrarModal(){
     modal.style.display="none";
 }
+//Crear las cards de productos en catalogo con los datos de la DB
 const createCard=data=>{
     data.forEach(product=>{
         // console.log(products);
@@ -68,14 +69,14 @@ const createCard=data=>{
     })
     items.appendChild(fragment)
 }
-//Añadir productos al carritoo
+//Añadir productos al carrito
 
 const añadirCarrito =e=>{
     // console.log(e.target.classList.contains("btn-primary"));
     if(e.target.classList.contains("btn-primary")){
         // console.log(e.target.parentElement);
         setCarrito(e.target.parentElement)
-
+        abrirModal();
     }
     e.stopPropagation()
 }
@@ -92,7 +93,7 @@ const setCarrito=objeto=>{
     carrito[producto.id]={...producto}
     objetosCarrito()
 }
-//Crear los productos en Catalogo y guardarlo en LocalStorage
+//Crear los productos en Carrito y guardarlo en LocalStorage
 const objetosCarrito=()=>{
     itemsCarrito.innerHTML=""
     Object.values(carrito).forEach(prod=>{

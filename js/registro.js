@@ -5,7 +5,7 @@ let txtEmailreg = document.getElementById("emailreg");
 let txtPassword= document.getElementById("password");
 let txtPasswordConfirm = document.getElementById("passwordConfirm");
 let passwordConfirmMessage = document.getElementById("passwordHelp");
-const URL_MAIN ='http://localhost:8080/api/users/register/';
+const URL_MAIN ='http://localhost:8080/api/users/';
 // let confirm=false;
 
 let regis='{"Registro":[]}';
@@ -96,9 +96,50 @@ registrar.addEventListener("click",(event)=>{
       if (txtPassword.value == txtPasswordConfirm.value) {
         passwordConfirmMessage.style.display="none"
         sendEmail(txtUsername,txtEmailreg,txtPassword);
-    pushregis(txtUsername,txtEmailreg,txtPassword);
+        
+        const data =  {email: `${txtEmailreg.value}`,
+        password: `${txtPassword.value}`
+        };
+            fetch(URL_MAIN, {
+            
+                method: 'POST', // or 'PUT'
+                headers: {
+                  'Content-Type': 'application/json',
+                 
+                },
+                body: JSON.stringify(data),
+              })
+              .then(response => response.json())
+              .then(data => {
+                // console.log(descripcion);
+                // console.log(nombre);
+                console.log('Success:', data);
+                Swal.fire({
+                            position: 'center',
+                            icon: 'success',
+                            title: 'Usuario registrado!',
+                            showConfirmButton: false,
+                            timer: 3000
+                        });
+              })
+              .catch((error) => {
+                console.error('Error:', error);
+                Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    title: 'NO se pudo registrar el usuario',
+                    showConfirmButton: false,
+                    timer: 3000
+                });
+              });
+
+
+
+        
+    // pushregis(txtUsername,txtEmailreg,txtPassword);
     setTimeout(function(){  
-    location.reload();
+      goLogin();
+      // location.reload();
     }, 3000);
       } else{
         passwordConfirmMessage.style.display="block"
@@ -106,44 +147,31 @@ registrar.addEventListener("click",(event)=>{
     
     
 });
-function pushregis() {
-  regisJson["Registro"].push({user:`${txtUsername.value}`,email:`${txtEmailreg.value}`,password:`${txtPassword.value}`});
-  localStorage.setItem("regis",regis=JSON.stringify(regisJson));
-  Swal.fire({
-    position: 'center',
-    icon: 'success',
-    title: 'Registro exitoso!',
-    showConfirmButton: false,
-    timer: 3000
-  });
-  
+function goLogin()
+{
+window.location.href="../Login.html"
 }
+// function pushregis() {
+//   regisJson["Registro"].push({user:`${txtUsername.value}`,email:`${txtEmailreg.value}`,password:`${txtPassword.value}`});
+//   localStorage.setItem("regis",regis=JSON.stringify(regisJson));
+//   Swal.fire({
+//     position: 'center',
+//     icon: 'success',
+//     title: 'Registro exitoso!',
+//     showConfirmButton: false,
+//     timer: 3000
+//   });
+  
+// }
+// window.addEventListener("load",function(){
+//     if(["Registro"]!=null){
+//         console.log(JSON.parse(localStorage.getItem("regis")));
+//         let regisTmp=JSON.parse(localStorage.getItem("regis"));
+//         regisJson=(regisTmp!=null)?regisTmp:regisJson;
 
-// fetch(URL_MAIN, {
-//   method: 'POST', // or 'PUT'
-//   headers: {
-//     'Content-Type': 'application/json',
-//   },
-//   body: JSON.stringify(data),
-// })
-// .then(response => response.json())
-// .then(data => {
-//   console.log('Success:', data);
-// })
-// .catch((error) => {
-//   console.error('Error:', error);
+//     }
+
 // });
-
-
-window.addEventListener("load",function(){
-    if(["Registro"]!=null){
-        console.log(JSON.parse(localStorage.getItem("regis")));
-        let regisTmp=JSON.parse(localStorage.getItem("regis"));
-        regisJson=(regisTmp!=null)?regisTmp:regisJson;
-
-    }
-
-});
 
 // let functionConfirmPassword = function(){
 //   if(password.value == passwordConfirm.value){
