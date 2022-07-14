@@ -14,7 +14,11 @@ let obj = JSON.parse(jsonStr);
 Agregar.addEventListener("click", (event) => {
     event.preventDefault();
     jsonStr = '{"Items":[]}';
-
+    if (!imagentxt.value) {
+        btnImagen.style.border = "red medium solid";
+        btnImagen.blur();
+        return;
+    }
     if (!validarNombreProducto(txtProductName) ||
         !validarDescripcionProducto(txtProductDescription) ||
         !validarPrecioProducto(txtProductPrice)
@@ -34,11 +38,12 @@ Agregar.addEventListener("click", (event) => {
             txtProductPrice.style.border = "red medium solid";
             txtProductPrice.blur();
         }
-        if (!imagentxt.value) {
-            btnImagen.style.border = "red medium solid";
-            Agregar.blur();
-            // return;
-        }
+        
+        // if (!imagentxt.value) {
+        //     btnImagen.style.border = "red medium solid";
+        //     Agregar.blur();
+        //     // return;
+        // }
         if ([txtProductName.value, txtProductDescription.value, txtProductPrice.value].includes("")) {
             console.log("Hay al menos un campo vacio...");
         }
