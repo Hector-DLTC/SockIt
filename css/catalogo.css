@@ -23,17 +23,7 @@ body {
     margin-bottom: 50%;
 }
 
-/* .container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #0096FF; 
-    border: solid; 
-    border-radius: 5%;
-   
-} */
+
 .contenedor-externo{
     background-color: whitesmoke; 
     padding: 5%; 
@@ -150,10 +140,6 @@ body {
 .contenidoModalCarrito{
     background-color: #f4f4f4;
     margin: 10%;
-    /* margin:20% auto; */
-    /* width: 35%; */
-    /* height: 80%; */
-    /* text-align: right; */
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),0 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name:abrirModal;
     animation-duration: 1s;

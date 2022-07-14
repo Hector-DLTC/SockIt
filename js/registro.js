@@ -6,7 +6,7 @@ let txtPassword= document.getElementById("password");
 let txtPasswordConfirm = document.getElementById("passwordConfirm");
 let passwordConfirmMessage = document.getElementById("passwordHelp");
 const URL_MAIN ='http://localhost:8080/api/users/';
-// let confirm=false;
+
 
 let regis='{"Registro":[]}';
 let regisJson=JSON.parse(regis);
@@ -44,16 +44,16 @@ registrar.addEventListener("click",(event)=>{
         
         !validarUsername(txtUsername) ||
         !validarPassword(txtPassword) ||
-        // !validarPasswordConfirm(txtPasswordConfirm) ||
+       
         !validarEmailreg(txtEmailreg)
       ) {
         
         if (!validarUsername(txtUsername)) {
           txtUsername.style.border = "red medium solid";
-        //   txtUsername.value = "";
+      
           txtUsername.focus();
         } 
-        // console.log(txtUsername.value);
+    
         if (!validarEmailreg(txtEmailreg)) {
           txtEmailreg.style.border = "red medium solid";
           txtEmailreg.focus();
@@ -64,11 +64,7 @@ registrar.addEventListener("click",(event)=>{
           txtPassword.focus();
         } 
      
-        // console.log(txtPassword.value);
-        // if (!validarPasswordConfirm(txtPasswordConfirm)) {
-        //     txtPasswordConfirm.style.border = "red medium solid";
-        //     txtPasswordConfirm.focus();
-        // }//console.log(txtPasswordConfirm.value);
+       
         
         if([txtUsername.value,txtEmailreg.value,txtPassword.value].includes("")){
             console.log("Hay al menos un campo vacio...");
@@ -79,17 +75,7 @@ registrar.addEventListener("click",(event)=>{
             txtPassword.style.border = "red medium solid";
               txtPassword.focus();
         }
-        // if(txtPassword.value===txtPasswordConfirm.value){
-        //     console.log("Las contraseñas no son iguales..."); 
-        //     // confirm=true;
-        // }
-
-        return;
-        // if(confirm=true) {
-        //     regisJson["Registro"].push({user:`${txtUsername.value}`,email:`${txtEmailreg.value}`,password:`${txtPassword.value}`});
-        //     localStorage.setItem("regis",regis=JSON.stringify(regisJson));
-            
-        // }
+       
         
         
     }
@@ -102,7 +88,7 @@ registrar.addEventListener("click",(event)=>{
         };
             fetch(URL_MAIN, {
             
-                method: 'POST', // or 'PUT'
+                method: 'POST', 
                 headers: {
                   'Content-Type': 'application/json',
                  
@@ -111,8 +97,7 @@ registrar.addEventListener("click",(event)=>{
               })
               .then(response => response.json())
               .then(data => {
-                // console.log(descripcion);
-                // console.log(nombre);
+               
                 console.log('Success:', data);
                 Swal.fire({
                             position: 'center',
@@ -135,11 +120,10 @@ registrar.addEventListener("click",(event)=>{
 
 
 
-        
-    // pushregis(txtUsername,txtEmailreg,txtPassword);
+       
     setTimeout(function(){  
       goLogin();
-      // location.reload();
+    
     }, 3000);
       } else{
         passwordConfirmMessage.style.display="block"
@@ -151,38 +135,7 @@ function goLogin()
 {
 window.location.href="../Login.html"
 }
-// function pushregis() {
-//   regisJson["Registro"].push({user:`${txtUsername.value}`,email:`${txtEmailreg.value}`,password:`${txtPassword.value}`});
-//   localStorage.setItem("regis",regis=JSON.stringify(regisJson));
-//   Swal.fire({
-//     position: 'center',
-//     icon: 'success',
-//     title: 'Registro exitoso!',
-//     showConfirmButton: false,
-//     timer: 3000
-//   });
-  
-// }
-// window.addEventListener("load",function(){
-//     if(["Registro"]!=null){
-//         console.log(JSON.parse(localStorage.getItem("regis")));
-//         let regisTmp=JSON.parse(localStorage.getItem("regis"));
-//         regisJson=(regisTmp!=null)?regisTmp:regisJson;
 
-//     }
-
-// });
-
-// let functionConfirmPassword = function(){
-//   if(password.value == passwordConfirm.value){
-//     message.style.color = 'green';
-//     message.innerHTML = 'La contraseña concuerda';
-//   } else {
-//     message.style.color = 'red';
-//     message.innerHTML = 'La contraseña NO concuerda';
-//   }
-// }
-// functionConfirmPassword.addEventListener('keyup', (e) -> {})
 
 
 function sendEmail() {

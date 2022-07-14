@@ -46,7 +46,7 @@ function randomBackground (){
     const bg = images[Math.floor(Math.random()*images.length)];
     section.style.backgroundImage = bg;
 }
-// setInterval(randomBackground, 1000);
+
 window.addEventListener("load", (e) => {
 randomBackground();
 });

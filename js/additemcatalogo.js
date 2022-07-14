@@ -5,8 +5,6 @@ function addItems(list_items){
         method:'get'
     }).then(function(response){
         response.json().then(function(json){
-            // console.log(json);
-            // console.log(json.length);
             productos=json;
             Array.from(json).forEach((p,index)=>{
                 list_items.innerHTML+=`
@@ -25,7 +23,7 @@ function addItems(list_items){
     }).catch(function(err){
         console.log(err);
     });
-    // console.log(document.getElementById("list-items"));
+    
 }// addItems
 window.addEventListener("load",function(){
     let div =document.getElementById("list-items");
