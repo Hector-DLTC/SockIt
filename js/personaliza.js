@@ -64,6 +64,8 @@ btnFaker.addEventListener("click", (event) => {
           .then(data => {
             // console.log(descripcion);
             // console.log(nombre);
+            if (localStorage.getItem("accessToken") !== undefined){
+
             console.log('Success:', data);
             Swal.fire({
                         position: 'center',
@@ -72,7 +74,7 @@ btnFaker.addEventListener("click", (event) => {
                         showConfirmButton: false,
                         timer: 3000
                     });
-          })
+            }})
           .catch((error) => {
             console.error('Error:', error);
             Swal.fire({

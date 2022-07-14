@@ -67,6 +67,8 @@ url_imagen: `${inputFile.value}`
       .then(data => {
         // console.log(descripcion);
         // console.log(nombre);
+        if (localStorage.getItem("accessToken") !== undefined){
+
         console.log('Success:', data);
         Swal.fire({
                     position: 'center',
@@ -75,7 +77,7 @@ url_imagen: `${inputFile.value}`
                     showConfirmButton: false,
                     timer: 3000
                 });
-      })
+      }})
       .catch((error) => {
         console.error('Error:', error);
         Swal.fire({
