@@ -59,7 +59,7 @@ function cerrarModal(){
 const createCard=data=>{
     data.forEach(product=>{
         // console.log(products);
-        templateCard.querySelector('img').setAttribute('src', `/img/img-catalogo/${product.url_imagen}`);
+        templateCard.querySelector('img').setAttribute('src', product.url_imagen);
         templateCard.querySelector('h5').textContent= product.nombre;
         templateCard.querySelector('small').textContent=product.descripcion;
         templateCard.querySelector('p').textContent=product.precio;
