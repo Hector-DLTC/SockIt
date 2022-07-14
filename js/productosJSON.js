@@ -14,12 +14,16 @@ let obj = JSON.parse(jsonStr);
 Agregar.addEventListener("click", (event) => {
     event.preventDefault();
     jsonStr = '{"Items":[]}';
-
+    if (!imagentxt.value) {
+        btnImagen.style.border = "red medium solid";
+        btnImagen.blur();
+        return;
+    }
     if (!validarNombreProducto(txtProductName) ||
         !validarDescripcionProducto(txtProductDescription) ||
         !validarPrecioProducto(txtProductPrice)
     ) {
-        if (!validarDescripcionProducto(txtProductName)) {
+        if (!validarNombreProducto(txtProductName)) {
             txtProductName.style.border = "red medium solid";
             //   txtUsername.value = "";
             txtProductName.blur();
@@ -34,20 +38,20 @@ Agregar.addEventListener("click", (event) => {
             txtProductPrice.style.border = "red medium solid";
             txtProductPrice.blur();
         }
-        if (!imagentxt.value) {
-            btnImagen.style.border = "red medium solid";
-            Agregar.blur();
-            // return;
-        }
-        if ([txtProductName.value, txtProductDescription.value, txtProductPrice.value].includes("")) {
+       
+        if ([txtProductName.value, txtProductDescription.value, txtProductPrice.value, imagentxt.value].includes("")) {
             console.log("Hay al menos un campo vacio...");
+            console.log(imagentxt.value);
+            console.log(fileImage.value);
         }
+        
+    // if (inputFile.value.includes('')) {
+    //     btnImagen.style.border = "red medium solid";
+    //     btnImagen.blur();
+    // }
         return;
     }
- 
-      
-        
-    // pushitems(txtProductName.value, txtProductDescription.value, txtProductPrice.value,inputFile.value);
+ // pushitems(txtProductName.value, txtProductDescription.value, txtProductPrice.value,inputFile.value);
 // console.log(txtProductName.value);
 const data =  {nombre: `${txtProductName.value}`,
 descripcion: `${txtProductDescription.value}`,
@@ -68,6 +72,8 @@ url_imagen: `${inputFile.value}`
         // console.log(descripcion);
         // console.log(nombre);
         console.log('Success:', data);
+        if (data.accessToken !== undefined){
+
         Swal.fire({
                     position: 'center',
                     icon: 'success',
@@ -75,7 +81,7 @@ url_imagen: `${inputFile.value}`
                     showConfirmButton: false,
                     timer: 3000
                 });
-      })
+}})
       .catch((error) => {
         console.error('Error:', error);
         Swal.fire({
@@ -86,10 +92,10 @@ url_imagen: `${inputFile.value}`
             timer: 3000
         });
       });
-    setTimeout(function() {
-        goCatalago();
-        // location.reload();
-    }, 3000);
+    // setTimeout(function() {
+    //     goCatalago();
+    //     // location.reload();
+    // }, 3000);
     
 
 });
